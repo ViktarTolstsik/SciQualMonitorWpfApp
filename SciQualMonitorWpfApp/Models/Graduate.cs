@@ -1,6 +1,8 @@
-﻿using SQLite;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +11,7 @@ namespace SciQualMonitorWpfApp.Models
 {
     public class Graduate
     {
-        [PrimaryKey, AutoIncrement]
+        [Key]
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname {  get; set; }
@@ -20,14 +22,6 @@ namespace SciQualMonitorWpfApp.Models
         public bool IsForeigner {  get; set; }
         public string ForeignCountry { get; set; }
         public string ForeignCommentary { get; set; }
-        public string[] GraduationInstitutionTitle { get; set; }
-        [MaxLength(4)]
-        public int[] GraduationYear { get; set;}
-        public string[] GraduationSpecialty { get; set; }
-        public string[] GraduationQualification { get; set; }
-        [MaxLength(4)]
-        public int[] MastersDegreeYear { get; set; }
-        public string[] MastersThesisTheme { get; set; }
         public string BIPGraduateType { get; set; }
         [MaxLength(4)]
         public int BIPAdmissionYear { get; set; }
@@ -37,25 +31,16 @@ namespace SciQualMonitorWpfApp.Models
         public string BIPSpecialty { get; set; }
         public string BIPStudyingForm { get; set; }
         public string BIPDepartment {  get; set; }
-        public bool[] SemiAnnualCertification { get; set; }
-        public int[] ArticlesCount { get; set; }
-        public int[] ThesisCount { get; set; }
-        public int PapersCount { get; set; }
         public string Transfers { get; set; }
         [MaxLength(4)]
-        public int[] ExpulsionYear { get; set; }
-        public string[] ExpulsionReason { get; set; }
-        [MaxLength(4)]
-        public int[] InterruptionYear { get; set; }
-        public string[] InterruptionReason { get; set; }
-        [MaxLength(4)]
-        public int[] RestorationYear { get; set; }
+        public int RestorationYear { get; set; }
         [MaxLength(4)]
         public int GraguationYear { get; set; }
         public string InGraduationYear { get; set; }
         [MaxLength(4)]
         public int ThesisDefenceYear { get; set; }
-        [Indexed]
         public int SciAdviserId { get; set; }
+        [ForeignKey("SciAdviserId")]
+        public Adviser Adviser { get; set; }
     }
 }
