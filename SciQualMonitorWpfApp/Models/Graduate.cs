@@ -31,9 +31,6 @@ namespace SciQualMonitorWpfApp.Models
         public string BIPSpecialty { get; set; }
         public string BIPStudyingForm { get; set; }
         public string BIPDepartment {  get; set; }
-        public string Transfers { get; set; }
-        [MaxLength(4)]
-        public int RestorationYear { get; set; }
         [MaxLength(4)]
         public int GraguationYear { get; set; }
         public string InGraduationYear { get; set; }

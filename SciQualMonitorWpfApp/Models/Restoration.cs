@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SciQualMonitorWpfApp.Models
 {
-    public class GraduateMastersDegree
+    public class Restoration
     {
         [Key]
         public int Id { get; set; }
@@ -16,7 +16,6 @@ namespace SciQualMonitorWpfApp.Models
         [ForeignKey("GraduateId")]
         public Graduate Graduate { get; set; }
         [MaxLength(4)]
-        public int MastersDegreeYear { get; set; }
-        public string MastersThesisTheme { get; set; }
+        public int RestorationYear { get; set; }
     }
 }
