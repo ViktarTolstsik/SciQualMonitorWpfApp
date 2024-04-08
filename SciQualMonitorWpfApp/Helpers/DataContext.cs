@@ -2,6 +2,7 @@
 using SciQualMonitorWpfApp.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,11 @@ namespace SciQualMonitorWpfApp.Helpers
         {
             var folder = Environment.SpecialFolder.LocalApplicationData;
             var path = Environment.GetFolderPath(folder);
+            path += @"/SciQualMonitor";
+            if (!Directory.Exists(path))
+            {
+                DirectoryInfo di = Directory.CreateDirectory(path);
+            }
             DbPath = System.IO.Path.Join(path, "SciQualMonitor.db");
         }
 

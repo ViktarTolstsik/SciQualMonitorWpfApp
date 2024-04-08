@@ -10,7 +10,7 @@ using SciQualMonitorWpfApp.Helpers;
 namespace SciQualMonitorWpfApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240405101139_InitialCreate")]
+    [Migration("20240408082343_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -320,47 +320,11 @@ namespace SciQualMonitorWpfApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("CertificationResults")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("GraduateId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("YearFiveCertOne")
-                        .HasMaxLength(1)
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("YearFiveCertTwo")
-                        .HasMaxLength(1)
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("YearFourCertOne")
-                        .HasMaxLength(1)
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("YearFourCertTwo")
-                        .HasMaxLength(1)
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("YearOneCertOne")
-                        .HasMaxLength(1)
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("YearOneCertTwo")
-                        .HasMaxLength(1)
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("YearThreeCertOne")
-                        .HasMaxLength(1)
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("YearThreeCertTwo")
-                        .HasMaxLength(1)
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("YearTwoCertOne")
-                        .HasMaxLength(1)
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("YearTwoCertTwo")
-                        .HasMaxLength(1)
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");

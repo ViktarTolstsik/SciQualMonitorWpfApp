@@ -95,16 +95,7 @@ namespace SciQualMonitorWpfApp.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     GraduateId = table.Column<int>(type: "INTEGER", nullable: false),
-                    YearOneCertOne = table.Column<int>(type: "INTEGER", maxLength: 1, nullable: false),
-                    YearOneCertTwo = table.Column<int>(type: "INTEGER", maxLength: 1, nullable: false),
-                    YearTwoCertOne = table.Column<int>(type: "INTEGER", maxLength: 1, nullable: false),
-                    YearTwoCertTwo = table.Column<int>(type: "INTEGER", maxLength: 1, nullable: false),
-                    YearThreeCertOne = table.Column<int>(type: "INTEGER", maxLength: 1, nullable: false),
-                    YearThreeCertTwo = table.Column<int>(type: "INTEGER", maxLength: 1, nullable: false),
-                    YearFourCertOne = table.Column<int>(type: "INTEGER", maxLength: 1, nullable: false),
-                    YearFourCertTwo = table.Column<int>(type: "INTEGER", maxLength: 1, nullable: false),
-                    YearFiveCertOne = table.Column<int>(type: "INTEGER", maxLength: 1, nullable: false),
-                    YearFiveCertTwo = table.Column<int>(type: "INTEGER", maxLength: 1, nullable: false)
+                    CertificationResults = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
