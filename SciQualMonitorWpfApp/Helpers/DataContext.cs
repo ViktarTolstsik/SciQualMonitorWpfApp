@@ -37,7 +37,6 @@ namespace SciQualMonitorWpfApp.Helpers
             }
             DbPath = System.IO.Path.Join(path, "SciQualMonitor.db");
         }
-
         protected override void OnConfiguring(DbContextOptionsBuilder options)
        => options.UseSqlite($"Data Source={DbPath}");
     }

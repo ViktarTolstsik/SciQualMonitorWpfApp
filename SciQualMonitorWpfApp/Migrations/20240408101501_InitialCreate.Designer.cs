@@ -10,7 +10,7 @@ using SciQualMonitorWpfApp.Helpers;
 namespace SciQualMonitorWpfApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240408082343_InitialCreate")]
+    [Migration("20240408101501_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
