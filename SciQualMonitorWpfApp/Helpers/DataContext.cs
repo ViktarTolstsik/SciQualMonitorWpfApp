@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
 using SciQualMonitorWpfApp.Models;
 using System;
 using System.Collections.Generic;
@@ -37,7 +38,11 @@ namespace SciQualMonitorWpfApp.Helpers
             }
             DbPath = System.IO.Path.Join(path, "SciQualMonitor.db");
         }
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder options)
+        //=> options.UseSqlite($"Data Source={DbPath}");
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-       => options.UseSqlite($"Data Source={DbPath}");
+       => options.UseSqlite($"Data Source={DbPath}; Password=12345678");
     }
 }
