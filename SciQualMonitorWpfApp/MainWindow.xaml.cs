@@ -40,7 +40,7 @@ namespace SciQualMonitorWpfApp
                 Surname = "sadsad",
                 Patronym = "asdass",
                 AcademicDegree = "asdasda",
-                Specialty = "sadasdadas"
+                Specialty = TextBox1.Text
             };
             GraduatesBaseData.AddAdvisers(adviser);
         }
