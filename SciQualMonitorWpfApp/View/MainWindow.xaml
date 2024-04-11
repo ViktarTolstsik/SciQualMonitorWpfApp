@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SciQualMonitorWpfApp"
         mc:Ignorable="d"
         WindowStyle="None"
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
@@ -13,15 +12,19 @@
     </WindowChrome.WindowChrome>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="#073763"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <TextBlock Text="TitlePlaceholder" VerticalAlignment="Center" Margin="5" FontFamily="Century Gothic" Foreground="AliceBlue"/>
+        </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="btnMinimize" Content="_" Width="40" Height="40"
+            <Button x:Name="btnMinimize" Content="_" Width="40" Height="30" Foreground="AliceBlue"
                     BorderBrush="Transparent" Background="Transparent" Click="btnMinimize_Click"/>
-            <Button x:Name="btnMaximize" Content="🗖" Width="40" Height="40"
+            <Button x:Name="btnMaximize" Content="🗖" Width="40" Height="30" Foreground="AliceBlue"
                     BorderBrush="Transparent" Background="Transparent" Click="btnMaximize_Click"/>
-            <Button x:Name="btnClose" Content="X" Width="40" Height="40"
+            <Button x:Name="btnClose" Content="X" Width="40" Height="30" Foreground="AliceBlue"
                     BorderBrush="Transparent" Background="Transparent" Click="btnClose_Click"/>
         </StackPanel>
     </Grid>
