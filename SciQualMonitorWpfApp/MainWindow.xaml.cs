@@ -27,22 +27,31 @@ namespace SciQualMonitorWpfApp
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            DragMove();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            Adviser adviser = new Adviser
+            Close();
+        }
+
+        private void btnMaximize_Click(object sender, RoutedEventArgs e)
+        {
+            if (WindowState == WindowState.Maximized)
             {
-                Name = "test",
-                Surname = "sadsad",
-                Patronym = "asdass",
-                AcademicDegree = "asdasda",
-                Specialty = TextBox1.Text
-            };
-            GraduatesBaseData.AddAdvisers(adviser);
+                WindowState = WindowState.Normal;
+            }
+            else
+            {
+                WindowState = WindowState.Maximized;
+            }
+        }
+
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
         }
     }
 }

@@ -5,10 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SciQualMonitorWpfApp"
         mc:Ignorable="d"
+        WindowStyle="None"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
         Title="MainWindow" Height="450" Width="800">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="5" CaptionHeight="0"/>
+    </WindowChrome.WindowChrome>
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="221,103,0,0" VerticalAlignment="Top" Height="185" Width="310" Click="Button_Click_1"/>
-        <TextBox HorizontalAlignment="Left" Margin="246,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="285" Name="TextBox1"/>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="btnMinimize" Content="_" Width="40" Height="40"
+                    BorderBrush="Transparent" Background="Transparent" Click="btnMinimize_Click"/>
+            <Button x:Name="btnMaximize" Content="🗖" Width="40" Height="40"
+                    BorderBrush="Transparent" Background="Transparent" Click="btnMaximize_Click"/>
+            <Button x:Name="btnClose" Content="X" Width="40" Height="40"
+                    BorderBrush="Transparent" Background="Transparent" Click="btnClose_Click"/>
+        </StackPanel>
     </Grid>
 </Window>
