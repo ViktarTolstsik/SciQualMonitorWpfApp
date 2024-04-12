@@ -8,33 +8,36 @@
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
         Title="MainWindow" Height="650" Width="1000"
         WindowStartupLocation="CenterScreen"
-        MinHeight="650" MinWidth="1000">
+        MinHeight="650" MinWidth="1000"
+        FontFamily="Century Gothic">
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0" CornerRadius="5" CaptionHeight="0"/>
     </WindowChrome.WindowChrome>
-    <Grid Background="#052c4f">
+    <Grid Background="AliceBlue">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Border Grid.Row="0" Background="#073763"/>
+        <Border Grid.Row="0" Background="#426ba0"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-            <TextBlock Text="TitlePlaceholder" VerticalAlignment="Center" Margin="5" FontFamily="Century Gothic" Foreground="AliceBlue"/>
+            <TextBlock Text="TitlePlaceholder" VerticalAlignment="Center" Margin="5" Foreground="AliceBlue"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="btnMinimize" Content="_" Width="40" Height="30" Foreground="AliceBlue"
+            <Button x:Name="loginButton" Content="👤" Width="40" Height="40" Margin="0 0 40 0" Foreground="AliceBlue"
+                    BorderBrush="Transparent" Background="Transparent"/>
+            <Button x:Name="btnMinimize" Content="_" Width="40" Height="40" Foreground="AliceBlue"
                     BorderBrush="Transparent" Background="Transparent" Click="btnMinimize_Click"/>
-            <Button x:Name="btnMaximize" Content="🗖" Width="40" Height="30" Foreground="AliceBlue"
+            <Button x:Name="btnMaximize" Content="🗖" Width="40" Height="40" Foreground="AliceBlue"
                     BorderBrush="Transparent" Background="Transparent" Click="btnMaximize_Click"/>
-            <Button x:Name="btnClose" Content="X" Width="40" Height="30" Foreground="AliceBlue"
+            <Button x:Name="btnClose" Content="X" Width="40" Height="40" Foreground="AliceBlue"
                     BorderBrush="Transparent" Background="Transparent" Click="btnClose_Click"/>
         </StackPanel>
         <TabControl Grid.Row="1" TabStripPlacement="Left">
             <TabItem Header="TabItem">
-                <Grid Background="#999ea2"/>
+                <Grid Background="AliceBlue"/>
             </TabItem>
             <TabItem Header="TabItem">
-                <Grid Background="#999ea2"/>
+                <Grid Background="AliceBlue"/>
             </TabItem>
         </TabControl>
     </Grid>
