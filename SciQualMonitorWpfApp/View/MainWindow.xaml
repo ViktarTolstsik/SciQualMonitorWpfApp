@@ -6,11 +6,13 @@
         mc:Ignorable="d"
         WindowStyle="None"
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="650" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        MinHeight="650" MinWidth="1000">
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0" CornerRadius="5" CaptionHeight="0"/>
     </WindowChrome.WindowChrome>
-    <Grid>
+    <Grid Background="#052c4f">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition/>
@@ -27,5 +29,13 @@
             <Button x:Name="btnClose" Content="X" Width="40" Height="30" Foreground="AliceBlue"
                     BorderBrush="Transparent" Background="Transparent" Click="btnClose_Click"/>
         </StackPanel>
+        <TabControl Grid.Row="1" TabStripPlacement="Left">
+            <TabItem Header="TabItem">
+                <Grid Background="#999ea2"/>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid Background="#999ea2"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
