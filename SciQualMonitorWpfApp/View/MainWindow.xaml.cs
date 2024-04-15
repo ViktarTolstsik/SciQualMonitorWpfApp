@@ -25,6 +25,7 @@ namespace SciQualMonitorWpfApp
         public MainWindow()
         {
             InitializeComponent();
+            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
