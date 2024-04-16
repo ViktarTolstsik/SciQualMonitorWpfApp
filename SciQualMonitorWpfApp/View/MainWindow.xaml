@@ -25,13 +25,13 @@
             <TextBlock Text="TitlePlaceholder" VerticalAlignment="Center" Margin="5" Foreground="AliceBlue"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="loginButton" Content="👤" Width="40" Height="40" Margin="0 0 40 0" Foreground="AliceBlue"
+            <Button x:Name="loginButton" Content="👤" Width="40" Height="40" Margin="0 0 40 0" Foreground="AliceBlue" BorderThickness="0"
                     BorderBrush="Transparent" Background="Transparent"/>
-            <Button x:Name="btnMinimize" Content="_" Width="40" Height="40" Foreground="AliceBlue"
+            <Button x:Name="btnMinimize" Content="_" Width="40" Height="40" Foreground="AliceBlue" BorderThickness="0"
                     BorderBrush="Transparent" Background="Transparent" Click="btnMinimize_Click"/>
-            <Button x:Name="btnMaximize" Content="🗖" Width="40" Height="40" Foreground="AliceBlue"
+            <Button x:Name="btnMaximize" Content="🗖" Width="40" Height="40" Foreground="AliceBlue" BorderThickness="0"
                     BorderBrush="Transparent" Background="Transparent" Click="btnMaximize_Click"/>
-            <Button x:Name="btnClose" Content="X" Width="40" Height="40" Foreground="AliceBlue"
+            <Button x:Name="btnClose" Content="X" Width="40" Height="40" Foreground="AliceBlue" BorderThickness="0"
                     BorderBrush="Transparent" Background="Transparent" Click="btnClose_Click"/>
         </StackPanel>
         <Grid Grid.Row="1">
@@ -42,7 +42,20 @@
             <Border Grid.Column="0" Background="#5f9ae5"/>
             <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical">
                 <Button Height="100" Width="100" Content="📖" Foreground="#5f9ae5" FontSize="40" 
-                        BorderBrush="AliceBlue" BorderThickness="0" Background="AliceBlue" />
+                        BorderBrush="AliceBlue" BorderThickness="0" Background="AliceBlue" Focusable="False">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" Background="AliceBlue">
+                                <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Margin="{TemplateBinding Padding}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                <Trigger Property="Button.IsFocused" Value="True">
+                                    <Setter TargetName="Border" Property="Background" Value="AliceBlue"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
                 <Button Height="100" Width="100" Content="✍️" Foreground="AliceBlue" FontSize="40" 
                         BorderBrush="Transparent" BorderThickness="0" Background="Transparent"/>
                 <Button Height="100" Width="100" Content="🧾" Foreground="AliceBlue" FontSize="40" 
