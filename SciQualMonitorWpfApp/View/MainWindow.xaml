@@ -41,10 +41,14 @@
             </Grid.ColumnDefinitions>
             <Border Grid.Column="0" Background="#5f9ae5"/>
             <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical">
-                <Button Height="100" Width="100" Content="👁️" Foreground="AliceBlue" FontSize="40" 
-                        BorderBrush="Transparent" Background="Transparent"/>
-                <Button Height="100" Width="100" Content="➕" Foreground="AliceBlue" FontSize="40" 
-                        BorderBrush="Transparent" Background="Transparent"/>
+                <Button Height="100" Width="100" Content="📖" Foreground="#5f9ae5" FontSize="40" 
+                        BorderBrush="AliceBlue" BorderThickness="0" Background="AliceBlue" />
+                <Button Height="100" Width="100" Content="✍️" Foreground="AliceBlue" FontSize="40" 
+                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent"/>
+                <Button Height="100" Width="100" Content="🧾" Foreground="AliceBlue" FontSize="40" 
+                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent"/>
+                <Button Height="100" Width="100" Content="🛈" Foreground="AliceBlue" FontSize="50" 
+                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent"/>
             </StackPanel>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
@@ -53,6 +57,37 @@
                 </Grid.RowDefinitions>
                 <Border Grid.Row="0" Background="#dfeaf9" CornerRadius="5" Margin="5"/>
                 <Border Grid.Row="1" Background="#dfeaf9" CornerRadius="5" Margin="5, 0, 5, 0"/>
+                <DataGrid Grid.Row="1" x:Name="dataGrid" IsReadOnly="True" BorderThickness="0" CanUserReorderColumns="False" 
+                          AutoGenerateColumns="False" Margin="5, 0, 5, 0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Фамилия"
+                                            Width="*"/>
+                        <DataGridTextColumn Header="Имя"
+                                            Width="*"/>
+                        <DataGridTextColumn Header="Отчество"
+                                            Width="*"/>
+                        <DataGridTextColumn Header="Год рождения"
+                                            Width="*"/>
+                        <DataGridTextColumn Header="Тип"
+                                            Width="*"/>
+                        <DataGridTextColumn Header="Руководитель"
+                                            Width="*"/>
+                        <DataGridTextColumn Width="50" Header="⟳">
+                            <DataGridTextColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="HorizontalContentAlignment"
+                                            Value="Center" />
+                                    <Setter Property="Foreground"
+                                            Value="#5f9ae5"/>
+                                    <Setter Property="FontWeight"
+                                            Value="Bold"/>
+                                    <Setter Property="FontSize"
+                                            Value="20"/>
+                                </Style>
+                            </DataGridTextColumn.HeaderStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
     </Grid>
