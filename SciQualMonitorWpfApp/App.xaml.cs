@@ -22,17 +22,17 @@ namespace SciQualMonitorWpfApp
             Adviser adviser = new Adviser
             {
                 Name = "test",
-                Surname = "sadsad",
+                Surname = "tyurtyuryr",
                 Patronym = "asdass",
                 AcademicDegree = "asdasda",
                 Specialty = "sadasdadas"
             };
             Graduate graduate = new Graduate
             {
-                Name = "cdredfsdf",
-                Surname = "sdfsdf",
+                Name = "ghcfhnfghnfhn",
+                Surname = "zcxvzvzcv",
                 Patronym = "sdafdasf",
-                DateOfBirth = 1234,
+                DateOfBirth = 4454,
                 Gender = "dsfdasf",
                 IsForeigner = false,
                 ForeignCountry = "asdasdad",
@@ -47,7 +47,7 @@ namespace SciQualMonitorWpfApp
                 GraguationYear = 1222,
                 InGraduationYear = "sdsdsasdasd",
                 ThesisDefenceYear = 4444,
-                SciAdviserId = 1
+                SciAdviserId = 7
             };
             GraduatesBaseData<Adviser>.AddData(adviser);
             GraduatesBaseData<Graduate>.AddData(graduate);

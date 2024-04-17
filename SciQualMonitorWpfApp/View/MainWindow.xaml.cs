@@ -28,7 +28,8 @@ namespace SciQualMonitorWpfApp
         public MainWindow()
         {
             InitializeComponent();
-            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight - 10;
+            this.MaxWidth = SystemParameters.MaximizedPrimaryScreenWidth - 10;
 
             graduates = new ObservableCollection<Graduate>(GraduatesBaseData<Graduate>.GetGraduates());
             advisers = new ObservableCollection<Adviser>(GraduatesBaseData<Adviser>.GetAdvisers());
