@@ -71,20 +71,23 @@
                 <Border Grid.Row="0" Background="#dfeaf9" CornerRadius="5" Margin="5"/>
                 <Border Grid.Row="1" Background="#dfeaf9" CornerRadius="5" Margin="5, 0, 5, 0"/>
                 <DataGrid Grid.Row="1" x:Name="dataGrid" IsReadOnly="True" BorderThickness="0" CanUserReorderColumns="False" 
-                          AutoGenerateColumns="False" Margin="5, 0, 5, 0">
+                          AutoGenerateColumns="False" CanUserResizeColumns="False" Margin="5, 0, 5, 0" ItemsSource="{Binding}">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Фамилия"
-                                            Width="*"/>
-                        <DataGridTextColumn Header="Имя"
-                                            Width="*"/>
-                        <DataGridTextColumn Header="Отчество"
-                                            Width="*"/>
-                        <DataGridTextColumn Header="Год рождения"
-                                            Width="*"/>
-                        <DataGridTextColumn Header="Тип"
-                                            Width="*"/>
-                        <DataGridTextColumn Header="Руководитель"
-                                            Width="*"/>
+                        <DataGridTextColumn Header="Фамилия" x:Name="graduateLastName" Binding="{Binding Surname}"
+                                            Width="2*"/>
+                        <DataGridTextColumn Header="Имя" x:Name="graduateFirstName" Binding="{Binding Name}"
+                                            Width="2*"/>
+                        <DataGridTextColumn Header="Отчество" x:Name="graduatePatronym" Binding="{Binding Patronym}"
+                                            Width="2*"/>
+                        <DataGridTextColumn Header="Год рождения" x:Name="graduateYearOfBirth" Binding="{Binding DateOfBirth}"
+                                            Width="*"
+                                            MinWidth="100"/>
+                        <DataGridTextColumn Header="Тип" x:Name="graduateType" Binding="{Binding BIPGraduateType}"
+                                            Width="2*"/>
+                        <DataGridTextColumn Header="Руководитель" x:Name="graduateAdviser" Binding="{Binding Adviser.Surname}"
+                                            Width="2*"/>
+                        <DataGridTextColumn
+                                            Width="100"/>
                         <DataGridTextColumn Width="50" Header="⟳">
                             <DataGridTextColumn.HeaderStyle>
                                 <Style TargetType="DataGridColumnHeader">

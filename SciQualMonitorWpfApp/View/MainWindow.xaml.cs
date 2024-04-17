@@ -2,6 +2,7 @@
 using SciQualMonitorWpfApp.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,10 +23,22 @@ namespace SciQualMonitorWpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ObservableCollection<Graduate> graduates;
+        public ObservableCollection<Adviser> advisers;
         public MainWindow()
         {
             InitializeComponent();
             this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+
+            graduates = new ObservableCollection<Graduate>(GraduatesBaseData<Graduate>.GetGraduates());
+            advisers = new ObservableCollection<Adviser>(GraduatesBaseData<Adviser>.GetAdvisers());
+
+            foreach (var graduate in graduates)
+            {
+                Adviser? adviser = advisers.FirstOrDefault(x => x.Id == graduate.SciAdviserId);
+                graduate.Adviser = adviser;
+            }
+            dataGrid.ItemsSource = graduates;
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

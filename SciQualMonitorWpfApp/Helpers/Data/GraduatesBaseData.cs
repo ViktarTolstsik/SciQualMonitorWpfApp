@@ -7,8 +7,30 @@ using System.Threading.Tasks;
 
 namespace SciQualMonitorWpfApp.Helpers.Data
 {
-    public static class GraduatesBaseData
+    public static class GraduatesBaseData<T>
     {
+        public static void AddData(T data)
+        {
+            using (var db = new DataContext()) 
+            {
+                db.Add(data);
+                db.SaveChanges();
+            }
+        }
+        public static List<Graduate> GetGraduates()
+        {
+            using(var db = new DataContext()) 
+            {
+                return db.Graduates.OrderBy(grd => grd.Surname).ToList();
+            }
+        }
+        public static List<Adviser> GetAdvisers()
+        {
+            using (var db = new DataContext())
+            {
+                return db.Advisers.OrderBy(adv => adv.Surname).ToList();
+            }
+        }
         public static void AddAdvisers(Adviser adviser)
         {
             using (var db = new DataContext())

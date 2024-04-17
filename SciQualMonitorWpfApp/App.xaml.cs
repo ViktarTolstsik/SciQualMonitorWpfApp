@@ -19,13 +19,15 @@ namespace SciQualMonitorWpfApp
         {
             base.OnStartup(e);
 
-            Adviser adviser = new Adviser{ 
+            Adviser adviser = new Adviser
+            {
                 Name = "test",
-                Surname="sadsad",
-                Patronym="asdass",
-                AcademicDegree="asdasda",
-                Specialty="sadasdadas"};
-            Graduate graduate = new Graduate 
+                Surname = "sadsad",
+                Patronym = "asdass",
+                AcademicDegree = "asdasda",
+                Specialty = "sadasdadas"
+            };
+            Graduate graduate = new Graduate
             {
                 Name = "cdredfsdf",
                 Surname = "sdfsdf",
@@ -47,8 +49,9 @@ namespace SciQualMonitorWpfApp
                 ThesisDefenceYear = 4444,
                 SciAdviserId = 1
             };
-            GraduatesBaseData.AddAdvisers(adviser);
-            GraduatesBaseData.AddGraduates(graduate);
+            GraduatesBaseData<Adviser>.AddData(adviser);
+            GraduatesBaseData<Graduate>.AddData(graduate);
+
         }
     }
 }
