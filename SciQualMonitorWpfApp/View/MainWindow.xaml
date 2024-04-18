@@ -111,8 +111,8 @@
                                             Width="2*"/>
                         <DataGridTextColumn Header="Руководитель" x:Name="graduateAdviser" Binding="{Binding Adviser.Surname}"
                                             Width="2*"/>
-                        <DataGridTextColumn
-                                            Width="100"/>
+                        <DataGridTextColumn Width="100">
+                        </DataGridTextColumn>
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
