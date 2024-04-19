@@ -26,7 +26,7 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
             <Button x:Name="loginButton" Content="👤" Width="40" Height="40" Margin="0 0 40 0" Foreground="AliceBlue" BorderThickness="0"
-                    BorderBrush="Transparent" Background="Transparent" ToolTip="Авторизация"/>
+                    BorderBrush="Transparent" Background="Transparent" ToolTip="Авторизация" Cursor="Hand"/>
             <Button x:Name="btnMinimize" Content="_" Width="40" Height="40" Foreground="AliceBlue" BorderThickness="0"
                     BorderBrush="Transparent" Background="Transparent" Click="btnMinimize_Click"/>
             <Button x:Name="btnMaximize" Content="🗖" Width="40" Height="40" Foreground="AliceBlue" BorderThickness="0"
@@ -57,11 +57,11 @@
                     </Button.Template>
                 </Button>
                 <Button Height="100" Width="100" Content="✍️" Foreground="AliceBlue" FontSize="40" ToolTip="Добавление записей"
-                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent"/>
+                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent" Cursor="Hand"/>
                 <Button Height="100" Width="100" Content="🧾" Foreground="AliceBlue" FontSize="40" ToolTip="Отчёты"
-                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent"/>
+                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent" Cursor="Hand"/>
                 <Button Height="100" Width="100" Content="🛈" Foreground="AliceBlue" FontSize="50" ToolTip="Справка"
-                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent"/>
+                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent" Cursor="Hand"/>
             </StackPanel>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
@@ -111,8 +111,18 @@
                                             Width="2*"/>
                         <DataGridTextColumn Header="Руководитель" x:Name="graduateAdviser" Binding="{Binding Adviser.Surname}"
                                             Width="2*"/>
-                        <DataGridTextColumn Width="100">
-                        </DataGridTextColumn>
+                        <DataGridTemplateColumn Width="60">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="📑" Width="29" Height="29" FontSize="20" Foreground="#5f9ae5" ToolTip="Просмотр сведений"
+                                                BorderBrush="Transparent" BorderThickness="0" Background="Transparent" Cursor="Hand"/>
+                                        <Button Content="✒️" Width="29" Height="29" FontSize="20" Foreground="#5f9ae5" ToolTip="Редактирование"
+                                                BorderBrush="Transparent" BorderThickness="0" Background="Transparent" Cursor="Hand"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
@@ -120,7 +130,7 @@
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2">
             <TextBlock Text="TitlePlaceholder" VerticalAlignment="Center" Margin="5" Foreground="#5f9ae5"/>
             <Button x:Name="refreshButton" Content="⟳" Width="30" Height="30" Margin="0" Foreground="#5f9ae5" BorderThickness="0"
-                    FontSize="20" FontWeight="Bold" BorderBrush="Transparent" Background="Transparent" ToolTip="Авторизация"/>
+                    FontSize="20" FontWeight="Bold" BorderBrush="Transparent" Background="Transparent" ToolTip="Обновить таблицу" Cursor="Hand"/>
         </StackPanel>
     </Grid>
 </Window>
