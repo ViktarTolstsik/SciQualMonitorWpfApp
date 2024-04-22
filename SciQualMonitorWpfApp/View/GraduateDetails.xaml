@@ -25,9 +25,9 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1">
-                <Button x:Name="btnMinimize" Content="_" Width="30" Height="20" Foreground="#5f9ae5" BorderThickness="0" Padding="0,0,0,3"
+                <Button x:Name="btnMinimize" Content="_" Width="30" Height="20" Foreground="#2371D5" BorderThickness="0" Padding="0,0,0,3"
                         BorderBrush="Transparent" Background="Transparent" Click="btnMinimize_Click"/>
-                <Button x:Name="btnClose" Content="X" Width="30" Height="20" Foreground="#5f9ae5" BorderThickness="0"
+                <Button x:Name="btnClose" Content="X" Width="30" Height="20" Foreground="#2371D5" BorderThickness="0"
                         BorderBrush="Transparent" Background="Transparent" Click="btnClose_Click"/>
             </StackPanel>
         </Grid>
