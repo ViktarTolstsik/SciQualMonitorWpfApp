@@ -54,7 +54,7 @@ namespace SciQualMonitorWpfApp
             }
             dataGrid.ItemsSource = viewGraduates;
 
-            titlePlaceholder.Text = $"Количество записей: {graduates.Count}";
+            titlePlaceholder.Text = $"Количество записей: {viewGraduates.Count}";
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -88,10 +88,12 @@ namespace SciQualMonitorWpfApp
         {
             GraduateDetails detailsWindow = new GraduateDetails();
             detailsWindow.Owner = this;
-            this.Opacity = 0.7;
+            this.Opacity = 0.9;
+            this.Effect = new BlurEffect();
             detailsWindow.ShowDialog();
 
             this.Opacity = 1;
+            this.Effect = null;
             UpdateView();
         }
 
@@ -102,6 +104,44 @@ namespace SciQualMonitorWpfApp
 
         private void refreshButton_Click(object sender, RoutedEventArgs e)
         {
+            UpdateView();
+        }
+
+        private void addRecordsButton_Click(object sender, RoutedEventArgs e)
+        {
+            Adviser adviser = new Adviser
+            {
+                Name = "test",
+                Surname = "tyurtyuryr",
+                Patronym = "asdass",
+                AcademicDegree = "asdasda",
+                Specialty = "sadasdadas"
+            };
+            Graduate graduate = new Graduate
+            {
+                Name = "ghcfhnfghnfhn",
+                Surname = "zcxvzvzcv",
+                Patronym = "sdafdasf",
+                DateOfBirth = 4454,
+                Gender = "dsfdasf",
+                IsForeigner = false,
+                ForeignCountry = "asdasdad",
+                ForeignCommentary = "asdasda",
+                BIPGraduateType = "dsasdfsf",
+                BIPAdmissionYear = 2222,
+                BIPContractYear = 2332,
+                BIPThesisTheme = "asdfdsfasd",
+                BIPSpecialty = "asdasdasd",
+                BIPStudyingForm = "sdsdsasdas",
+                BIPDepartment = "aassssss",
+                GraguationYear = 1222,
+                InGraduationYear = "sdsdsasdasd",
+                ThesisDefenceYear = 4444,
+                SciAdviserId = 1
+            };
+            GraduatesBaseData<Adviser>.AddData(adviser);
+            GraduatesBaseData<Graduate>.AddData(graduate);
+
             UpdateView();
         }
     }

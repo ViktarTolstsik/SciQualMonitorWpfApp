@@ -18,40 +18,6 @@ namespace SciQualMonitorWpfApp
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-
-            Adviser adviser = new Adviser
-            {
-                Name = "test",
-                Surname = "tyurtyuryr",
-                Patronym = "asdass",
-                AcademicDegree = "asdasda",
-                Specialty = "sadasdadas"
-            };
-            Graduate graduate = new Graduate
-            {
-                Name = "ghcfhnfghnfhn",
-                Surname = "zcxvzvzcv",
-                Patronym = "sdafdasf",
-                DateOfBirth = 4454,
-                Gender = "dsfdasf",
-                IsForeigner = false,
-                ForeignCountry = "asdasdad",
-                ForeignCommentary = "asdasda",
-                BIPGraduateType = "dsasdfsf",
-                BIPAdmissionYear = 2222,
-                BIPContractYear = 2332,
-                BIPThesisTheme = "asdfdsfasd",
-                BIPSpecialty = "asdasdasd",
-                BIPStudyingForm = "sdsdsasdas",
-                BIPDepartment = "aassssss",
-                GraguationYear = 1222,
-                InGraduationYear = "sdsdsasdasd",
-                ThesisDefenceYear = 4444,
-                SciAdviserId = 7
-            };
-            GraduatesBaseData<Adviser>.AddData(adviser);
-            GraduatesBaseData<Graduate>.AddData(graduate);
-
         }
     }
 }

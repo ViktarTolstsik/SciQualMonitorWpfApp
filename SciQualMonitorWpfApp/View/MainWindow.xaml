@@ -57,8 +57,8 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button Height="100" Width="100" Content="✍️" Foreground="AliceBlue" FontSize="40" ToolTip="Добавление записей"
-                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent" Cursor="Hand"/>
+                <Button x:Name="addRecordsButton" Height="100" Width="100" Content="✍️" Foreground="AliceBlue" FontSize="40" ToolTip="Добавление записей"
+                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent" Cursor="Hand" Click="addRecordsButton_Click"/>
                 <Button Height="100" Width="100" Content="🧾" Foreground="AliceBlue" FontSize="40" ToolTip="Отчёты"
                         BorderBrush="Transparent" BorderThickness="0" Background="Transparent" Cursor="Hand"/>
                 <Button Height="100" Width="100" Content="🛈" Foreground="AliceBlue" FontSize="50" ToolTip="Справка"

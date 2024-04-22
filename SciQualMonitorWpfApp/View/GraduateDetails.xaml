@@ -14,22 +14,83 @@
         <WindowChrome GlassFrameThickness="0" CornerRadius="5" CaptionHeight="0"/>
     </WindowChrome.WindowChrome>
     <Grid Background="White">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Border Grid.Column="0" BorderThickness="0,0,3,0" BorderBrush="#cfe0f7"/>
-        <Grid Grid.Column="1" Background="AliceBlue">
+        <Grid Background="#2371D5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+            <Border Grid.Row="1" Background="White"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1">
-                <Button x:Name="btnMinimize" Content="_" Width="30" Height="20" Foreground="#2371D5" BorderThickness="0" Padding="0,0,0,3"
+                <Button x:Name="btnMinimize" Content="_" Width="30" Height="20" Foreground="AliceBlue" BorderThickness="0" Padding="0,0,0,3"
                         BorderBrush="Transparent" Background="Transparent" Click="btnMinimize_Click"/>
-                <Button x:Name="btnClose" Content="X" Width="30" Height="20" Foreground="#2371D5" BorderThickness="0"
+                <Button x:Name="btnClose" Content="X" Width="30" Height="20" Foreground="AliceBlue" BorderThickness="0"
                         BorderBrush="Transparent" Background="Transparent" Click="btnClose_Click"/>
             </StackPanel>
+            <TabControl Grid.Row="1" TabStripPlacement="Left">
+                <TabControl.Resources>
+                    <Style TargetType="{x:Type TabPanel}">
+                        <Setter Property="VerticalAlignment" Value="Center" />
+                    </Style>
+                </TabControl.Resources>
+                <TabItem Height="40" Margin="0">
+                    <TabItem.Header>
+                        <Label HorizontalContentAlignment="Left">Общие сведения</Label>
+                    </TabItem.Header>
+                    <Grid Background="AliceBlue">
+                        
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Высшее образование" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+                        
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Магистратура" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Аспирантура (институт соискательства)" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Результативность подготовки" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Переводы из других УВО" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Отчисления" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Прерывание срока обучения" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Восстановление" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Выпуск" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Научный руководитель" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+            </TabControl>
         </Grid>
     </Grid>
 </Window>
