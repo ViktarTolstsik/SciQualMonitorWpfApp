@@ -46,7 +46,8 @@
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" Background="White">
-                                <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Margin="{TemplateBinding Padding}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" 
+                                                  Margin="{TemplateBinding Padding}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                 </Border>
                                 <ControlTemplate.Triggers>
                                 <Trigger Property="Button.IsFocused" Value="True">
@@ -69,17 +70,21 @@
                     <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
                 <Border Grid.Row="0" Background="AliceBlue" CornerRadius="5" Margin="5"/>
-                <Border Grid.Row="1" Background="AliceBlue" CornerRadius="5" Margin="5, 0, 5, 0"/>
+                <Border Grid.Row="1" Background="White" CornerRadius="5" Margin="5, 0, 5, 0"/>
                 <DataGrid Grid.Row="1" x:Name="dataGrid" IsReadOnly="True" BorderThickness="0" CanUserReorderColumns="False" CanUserResizeRows="False" 
-                          AutoGenerateColumns="False" CanUserResizeColumns="False"  HeadersVisibility="Column" Margin="5, 0, 5, 0" ItemsSource="{Binding}">
+                          Background="White" AutoGenerateColumns="False" CanUserResizeColumns="False"  HeadersVisibility="Column" Margin="5, 2, 5, 0" 
+                          ItemsSource="{Binding}" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="Transparent">
                     <DataGrid.Resources>
                         <ResourceDictionary>
+                            <Style x:Key="{x:Type DataGridColumnHeader}" TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="FontSize" Value="14"/>
+                            </Style>
                             <Style x:Key="{x:Type DataGridCell}" TargetType="{x:Type DataGridCell}">
-                                <Setter Property="Background" Value="{x:Null}" />
-                                <Setter Property="BorderBrush" Value="{x:Null}" />
+                                <Setter Property="Background" Value="AliceBlue" />
+                                <Setter Property="FontSize" Value="14"/>
+                                <Setter Property="BorderThickness" Value="0,1,0,1"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsSelected" Value="True">
-                                        <Setter Property="Background" Value="{x:Null}" />
                                         <Setter Property="BorderBrush" Value="{x:Null}" />
                                         <Setter Property="Foreground" Value="#2371D5"/>
                                     </Trigger>
@@ -99,19 +104,29 @@
                     </DataGrid.Resources>
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Фамилия" x:Name="graduateLastName" Binding="{Binding Surname}"
-                                            Width="2*"/>
+                                            Width="2*">
+                        </DataGridTextColumn>
                         <DataGridTextColumn Header="Имя" x:Name="graduateFirstName" Binding="{Binding Name}"
-                                            Width="2*"/>
+                                            Width="2*">
+                        </DataGridTextColumn>
                         <DataGridTextColumn Header="Отчество" x:Name="graduatePatronym" Binding="{Binding Patronym}"
-                                            Width="2*"/>
+                                            Width="2*">
+                        </DataGridTextColumn>
                         <DataGridTextColumn Header="Год рождения" x:Name="graduateYearOfBirth" Binding="{Binding DateOfBirth}"
                                             Width="*"
-                                            MinWidth="100"/>
+                                            MinWidth="130">
+                        </DataGridTextColumn>
                         <DataGridTextColumn Header="Тип" x:Name="graduateType" Binding="{Binding BIPGraduateType}"
-                                            Width="2*"/>
+                                            Width="2*">
+                        </DataGridTextColumn>
                         <DataGridTextColumn Header="Руководитель" x:Name="graduateAdviser" Binding="{Binding Adviser.Surname}"
                                             Width="2*"/>
                         <DataGridTemplateColumn Width="60">
+                            <DataGridTemplateColumn.HeaderStyle>
+                                <Style TargetType="{x:Type DataGridColumnHeader}">
+                                    <Setter Property="Background" Value="White"/>
+                                </Style>
+                            </DataGridTemplateColumn.HeaderStyle>
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
