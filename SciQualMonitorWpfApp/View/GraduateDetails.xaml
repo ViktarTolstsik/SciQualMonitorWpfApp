@@ -36,13 +36,34 @@
                     <TabItem.Header>
                         <Label HorizontalContentAlignment="Left">Общие сведения</Label>
                     </TabItem.Header>
-                    <Grid Background="AliceBlue">
-                        
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" BorderBrush="White" Background="AliceBlue" BorderThickness="3" CornerRadius="5"/>
+                        <Border Grid.Row="1" BorderBrush="White" Background="AliceBlue" BorderThickness="3" CornerRadius="5"/>
+                        <Border Grid.Row="2" BorderBrush="White" Background="AliceBlue" BorderThickness="3" CornerRadius="5"/>
+                        <Label Content="ФИО" HorizontalAlignment="Left" Margin="60,5,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                        <Label Content="Токаев Касым-Жомарт Кемелевич" HorizontalAlignment="Left" Margin="60,30,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label Content="Год рождения" HorizontalAlignment="Left" Margin="60,65,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                        <Label Content="1953" HorizontalAlignment="Left" Margin="60,90,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label Content="Пол" HorizontalAlignment="Left" Margin="60,125,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                        <RadioButton Content="Мужской" HorizontalAlignment="Left" Margin="65,156,0,0" VerticalAlignment="Top" FontSize="14" IsChecked="True"/>
+                        <RadioButton Content="Женский" HorizontalAlignment="Left" Margin="155,156,0,0" VerticalAlignment="Top" FontSize="14"/>
+                        <CheckBox Grid.Row="1" Content="Иностранец" HorizontalAlignment="Left" Margin="65,20,0,0" VerticalAlignment="Top" FontSize="14" IsChecked="True"/>
+                        <Label Grid.Row="1" Content="Страна" VerticalAlignment="Top" Margin="60,40,0,0" HorizontalAlignment="Left" FontSize="14" FontWeight="Bold"/>
+                        <Label Grid.Row="1" Content="Казахстан" HorizontalAlignment="Left" Margin="60,65,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label Grid.Row="1" Content="Комментарии" VerticalAlignment="Top" Margin="0,40,0,0" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                        <TextBox Grid.Row="1" HorizontalAlignment="Left" Margin="269,75,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Text="Назарбаев, геть!" VerticalAlignment="Top" Width="300" Height="60"/>
+                        <Label Grid.Row="2" Content="Учащийся" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                        <Label Grid.Row="2" Content="Аспирант" HorizontalAlignment="Left" Margin="60,25,0,0" VerticalAlignment="Top" FontSize="20"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Высшее образование" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
-                        
+
                     </Grid>
                 </TabItem>
                 <TabItem Header="Магистратура" Height="40" Margin="0">
