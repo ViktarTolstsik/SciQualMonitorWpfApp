@@ -86,7 +86,9 @@ namespace SciQualMonitorWpfApp
 
         private void viewButton_Click(object sender, RoutedEventArgs e)
         {
-            GraduateDetails detailsWindow = new GraduateDetails();
+            Graduate selectedGraduate = dataGrid.SelectedItem as Graduate;
+
+            GraduateDetails detailsWindow = new GraduateDetails(selectedGraduate);
             detailsWindow.Owner = this;
             this.Opacity = 0.9;
             this.Effect = new BlurEffect();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SciQualMonitorWpfApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,13 @@ namespace SciQualMonitorWpfApp.View
     /// </summary>
     public partial class GraduateDetails : Window
     {
-        public GraduateDetails()
+        public Graduate Graduate;
+        public GraduateDetails(Graduate graduate)
         {
             InitializeComponent();
+            this.Graduate = graduate;
+
+            tabControl.DataContext = Graduate;
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)

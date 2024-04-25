@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SciQualMonitorWpfApp.View"
         mc:Ignorable="d"
+        x:Name="DetailsWindow"
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
         Title="GraduateDetails" Height="500" Width="900"
         WindowStartupLocation="CenterOwner" WindowStyle="None"
@@ -29,7 +30,7 @@
                 <Button x:Name="btnClose" Content="X" Width="30" Height="30" Foreground="AliceBlue" BorderThickness="0"
                         BorderBrush="Transparent" Background="Transparent" Click="btnClose_Click"/>
             </StackPanel>
-            <TabControl Grid.Row="1" TabStripPlacement="Left" BorderThickness="0" Background="White">
+            <TabControl x:Name="tabControl" Grid.Row="1" TabStripPlacement="Left" BorderThickness="0" Background="White">
                 <TabControl.Resources>
                     <Style TargetType="{x:Type TabPanel}">
                         <Setter Property="VerticalAlignment" Value="Center" />
@@ -54,7 +55,7 @@
                                             <Setter TargetName="Border" Property="BorderBrush" Value="White"/>
                                         </Trigger>
                                         <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter TargetName="Panel" Property="Background" Value="LightBlue"/>
+                                            <Setter TargetName="Panel" Property="Background" Value="AliceBlue"/>
                                         </Trigger>
                                     </ControlTemplate.Triggers>
                                 </ControlTemplate>
@@ -73,19 +74,23 @@
                         <Border Grid.Row="1" BorderBrush="White" Background="AliceBlue" BorderThickness="3" CornerRadius="5"/>
                         <Border Grid.Row="2" BorderBrush="White" Background="AliceBlue" BorderThickness="3" CornerRadius="5"/>
                         <Label Content="ФИО" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-                        <Label Content="Токаев Касым-Жомарт Кемелевич" HorizontalAlignment="Left" Margin="40,30,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <StackPanel HorizontalAlignment="Left" Margin="40,30,0,0" VerticalAlignment="Top" Orientation="Horizontal">
+                            <Label Content="{Binding Surname}" FontSize="20"/>
+                            <Label Content="{Binding Name}" FontSize="20"/>
+                            <Label Content="{Binding Patronym}" FontSize="20"/>
+                        </StackPanel>
                         <Label Content="Год рождения" HorizontalAlignment="Left" Margin="40,65,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-                        <Label Content="1953" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label Content="{Binding DateOfBirth}" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top" FontSize="20"/>
                         <Label Content="Пол" HorizontalAlignment="Left" Margin="40,125,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
                         <RadioButton Content="Мужской" HorizontalAlignment="Left" Margin="45,156,0,0" VerticalAlignment="Top" FontSize="14" IsChecked="True"/>
                         <RadioButton Content="Женский" HorizontalAlignment="Left" Margin="155,156,0,0" VerticalAlignment="Top" FontSize="14"/>
                         <CheckBox Grid.Row="1" Content="Иностранец" HorizontalAlignment="Left" Margin="45,20,0,0" VerticalAlignment="Top" FontSize="14" IsChecked="True"/>
                         <Label Grid.Row="1" Content="Страна" VerticalAlignment="Top" Margin="40,40,0,0" HorizontalAlignment="Left" FontSize="14" FontWeight="Bold"/>
-                        <Label Grid.Row="1" Content="Казахстан" HorizontalAlignment="Left" Margin="40,65,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label Grid.Row="1" Content="{Binding ForeignCountry}" HorizontalAlignment="Left" Margin="40,65,0,0" VerticalAlignment="Top" FontSize="20"/>
                         <Label Grid.Row="1" Content="Комментарии" VerticalAlignment="Top" Margin="0,40,0,0" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
-                        <TextBox Grid.Row="1" HorizontalAlignment="Left" Margin="269,75,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Text="Назарбаев, геть!" VerticalAlignment="Top" Width="300" Height="60"/>
+                        <TextBox Grid.Row="1" HorizontalAlignment="Left" Margin="269,75,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Text="{Binding ForeignCommentary}" VerticalAlignment="Top" Width="300" Height="60"/>
                         <Label Grid.Row="2" Content="Учащийся" HorizontalAlignment="Left" Margin="40,20,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-                        <Label Grid.Row="2" Content="Аспирант" HorizontalAlignment="Left" Margin="40,45,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label Grid.Row="2" Content="{Binding BIPGraduateType}" HorizontalAlignment="Left" Margin="40,45,0,0" VerticalAlignment="Top" FontSize="20"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Высшее образование" Height="40" Margin="0">
