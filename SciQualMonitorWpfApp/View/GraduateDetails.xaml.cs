@@ -27,6 +27,31 @@ namespace SciQualMonitorWpfApp.View
             this.Graduate = graduate;
 
             tabControl.DataContext = Graduate;
+
+            if (Graduate.Gender.ToLower() == "мужской")
+            {
+               genderRadioM.IsChecked = true;
+            }
+            else
+            {
+                genderRadioF.IsChecked = true;
+            }
+
+            if (Graduate.IsForeigner) 
+            {
+                foreignCheck.IsChecked = true;
+            }
+            else
+            {
+                foreignCheck.IsEnabled = false;
+
+                foreignCountryLabel.Foreground = new SolidColorBrush(Colors.Gray);
+                foreignCountryName.Content = null;
+
+                foreignCommentaryLabel.Foreground = new SolidColorBrush(Colors.Gray);
+                foreignCommentaryText.Text = null;
+                foreignCommentaryText.IsEnabled = false;
+            }
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)

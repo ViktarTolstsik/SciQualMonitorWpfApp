@@ -96,7 +96,7 @@ namespace SciQualMonitorWpfApp
 
             this.Opacity = 1;
             this.Effect = null;
-            UpdateView();
+            //UpdateView();
         }
 
         private void editButton_Click(object sender, RoutedEventArgs e)

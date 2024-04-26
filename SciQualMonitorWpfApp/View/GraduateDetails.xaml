@@ -82,13 +82,13 @@
                         <Label Content="Год рождения" HorizontalAlignment="Left" Margin="40,65,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
                         <Label Content="{Binding DateOfBirth}" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top" FontSize="20"/>
                         <Label Content="Пол" HorizontalAlignment="Left" Margin="40,125,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-                        <RadioButton Content="Мужской" HorizontalAlignment="Left" Margin="45,156,0,0" VerticalAlignment="Top" FontSize="14" IsChecked="True"/>
-                        <RadioButton Content="Женский" HorizontalAlignment="Left" Margin="155,156,0,0" VerticalAlignment="Top" FontSize="14"/>
-                        <CheckBox Grid.Row="1" Content="Иностранец" HorizontalAlignment="Left" Margin="45,20,0,0" VerticalAlignment="Top" FontSize="14" IsChecked="True"/>
-                        <Label Grid.Row="1" Content="Страна" VerticalAlignment="Top" Margin="40,40,0,0" HorizontalAlignment="Left" FontSize="14" FontWeight="Bold"/>
-                        <Label Grid.Row="1" Content="{Binding ForeignCountry}" HorizontalAlignment="Left" Margin="40,65,0,0" VerticalAlignment="Top" FontSize="20"/>
-                        <Label Grid.Row="1" Content="Комментарии" VerticalAlignment="Top" Margin="0,40,0,0" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
-                        <TextBox Grid.Row="1" HorizontalAlignment="Left" Margin="269,75,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Text="{Binding ForeignCommentary}" VerticalAlignment="Top" Width="300" Height="60"/>
+                        <RadioButton x:Name="genderRadioM" Content="Мужской" HorizontalAlignment="Left" Margin="45,156,0,0" VerticalAlignment="Top" FontSize="14"/>
+                        <RadioButton x:Name="genderRadioF" Content="Женский" HorizontalAlignment="Left" Margin="155,156,0,0" VerticalAlignment="Top" FontSize="14"/>
+                        <CheckBox x:Name="foreignCheck" Grid.Row="1" Content="Иностранец" HorizontalAlignment="Left" Margin="45,20,0,0" VerticalAlignment="Top" FontSize="14"/>
+                        <Label x:Name="foreignCountryLabel" Grid.Row="1" Content="Страна" VerticalAlignment="Top" Margin="40,40,0,0" HorizontalAlignment="Left" FontSize="14" FontWeight="Bold"/>
+                        <Label x:Name="foreignCountryName" Grid.Row="1" Content="{Binding ForeignCountry}" HorizontalAlignment="Left" Margin="40,65,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label x:Name="foreignCommentaryLabel" Grid.Row="1" Content="Комментарии" VerticalAlignment="Top" Margin="0,40,0,0" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                        <TextBox x:Name="foreignCommentaryText" Grid.Row="1" HorizontalAlignment="Left" Margin="269,75,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Text="{Binding ForeignCommentary}" VerticalAlignment="Top" Width="300" Height="60"/>
                         <Label Grid.Row="2" Content="Учащийся" HorizontalAlignment="Left" Margin="40,20,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
                         <Label Grid.Row="2" Content="{Binding BIPGraduateType}" HorizontalAlignment="Left" Margin="40,45,0,0" VerticalAlignment="Top" FontSize="20"/>
                     </Grid>
@@ -104,8 +104,27 @@
                     </Grid>
                 </TabItem>
                 <TabItem Header="Аспирантура (институт соискательства)" Height="40" Margin="0">
-                    <Grid Background="AliceBlue">
-
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="230"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" BorderBrush="White" Background="AliceBlue" BorderThickness="3" CornerRadius="5"/>
+                        <Border Grid.Row="1" BorderBrush="White" Background="AliceBlue" BorderThickness="3" CornerRadius="5"/>
+                        <Border Grid.Row="2" BorderBrush="White" Background="AliceBlue" BorderThickness="3" CornerRadius="5"/>
+                        <Label Content="Год поступления в БИП" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                        <Label Content="{Binding BIPAdmissionYear}" HorizontalAlignment="Left" Margin="40,45,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label Content="Год заключения контракта" HorizontalAlignment="Left" Margin="240,5,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                        <Label Content="{Binding BIPContractYear}" HorizontalAlignment="Left" Margin="240,45,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label Grid.Row="1" Content="Тема диссертации" VerticalAlignment="Top" Margin="40,40,0,0" HorizontalAlignment="Left" FontSize="14" FontWeight="Bold"/>
+                        <Label Grid.Row="1" Content="{Binding BIPThesisTheme}" HorizontalAlignment="Left" Margin="40,75,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label Grid.Row="1" Content="Специальность" VerticalAlignment="Top" Margin="240,40,0,0" HorizontalAlignment="Left" FontSize="14" FontWeight="Bold"/>
+                        <Label Grid.Row="1" Content="{Binding BIPSpecialty}" HorizontalAlignment="Left" Margin="240,75,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label Grid.Row="2" Content="Форма обучения" HorizontalAlignment="Left" Margin="40,20,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                        <Label Grid.Row="2" Content="{Binding BIPStudyingForm}" HorizontalAlignment="Left" Margin="40,55,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label Grid.Row="2" Content="Кафедра" HorizontalAlignment="Left" Margin="240,20,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                        <Label Grid.Row="2" Content="{Binding BIPDepartment}" HorizontalAlignment="Left" Margin="240,55,0,0" VerticalAlignment="Top" FontSize="20"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Результативность подготовки" Height="40" Margin="0">
