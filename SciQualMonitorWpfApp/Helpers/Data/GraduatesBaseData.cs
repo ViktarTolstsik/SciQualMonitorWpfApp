@@ -17,6 +17,21 @@ namespace SciQualMonitorWpfApp.Helpers.Data
                 db.SaveChanges();
             }
         }
+
+        public static void GetData(out var data)
+        {
+            using (var db = new DataContext())
+            {
+                switch (typeof(T).Name)
+                {
+                    case "Adviser":
+                        data = db.Advisers.OrderBy(adv => adv.Surname).ToList();
+                        break;
+                    case "Article":
+                        break;
+                }
+            }
+        }
         public static List<Graduate> GetGraduates()
         {
             using(var db = new DataContext()) 
