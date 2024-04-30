@@ -141,8 +141,20 @@ namespace SciQualMonitorWpfApp
                 ThesisDefenceYear = 4444,
                 SciAdviserId = 1
             };
+            ArticlesCount articles1 = new ArticlesCount
+            {
+                GraduateId = 1,
+                YearOneArticles = 4,
+                YearTwoArticles = 2,
+                YearThreeArticles = 3,
+                YearFourArticles = 6,
+                YearFiveArticles = 7
+            };
             GraduatesBaseData<Adviser>.AddData(adviser);
             GraduatesBaseData<Graduate>.AddData(graduate);
+            GraduatesBaseData<ArticlesCount>.AddData(articles1);
+
+            List<ArticlesCount> articles =  (List<ArticlesCount>)GraduatesBaseData<ArticlesCount>.GetData();
 
             UpdateView();
         }

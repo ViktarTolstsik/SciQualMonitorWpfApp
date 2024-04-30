@@ -18,17 +18,20 @@ namespace SciQualMonitorWpfApp.Helpers.Data
             }
         }
 
-        public static void GetData(out var data)
+        public static object GetData()
         {
             using (var db = new DataContext())
             {
                 switch (typeof(T).Name)
                 {
                     case "Adviser":
-                        data = db.Advisers.OrderBy(adv => adv.Surname).ToList();
+                        return db.Advisers.OrderBy(adv => adv.Surname).ToList();
                         break;
-                    case "Article":
+                    case "ArticlesCount":
+                        return db.Articles.ToList();
                         break;
+                    default:
+                        return null;
                 }
             }
         }
