@@ -119,6 +119,7 @@ namespace SciQualMonitorWpfApp
                 AcademicDegree = "asdasda",
                 Specialty = "sadasdadas"
             };
+
             Graduate graduate = new Graduate
             {
                 Name = "ghcfhnfghnfhn",
@@ -141,6 +142,7 @@ namespace SciQualMonitorWpfApp
                 ThesisDefenceYear = 4444,
                 SciAdviserId = 1
             };
+
             ArticlesCount articles1 = new ArticlesCount
             {
                 GraduateId = 1,
@@ -150,9 +152,84 @@ namespace SciQualMonitorWpfApp
                 YearFourArticles = 6,
                 YearFiveArticles = 7
             };
+
+            Expulsion expulsion = new Expulsion
+            {
+                GraduateId = 1,
+                ExpulsionYear = 2222,
+                ExpulsionReason = "dfdsfasdfadsf"
+            };
+
+            GraduateMastersDegree mastersDegree = new GraduateMastersDegree
+            {
+                GraduateId = 1,
+                MastersDegreeYear = 3435,
+                MastersThesisTheme = "dsscsdafasfasdfasf"
+            };
+
+            HigherEducationGraduation higherEducation = new HigherEducationGraduation
+            {
+                GraduateId = 1,
+                GraduationInstitutionTitle = "asdasdasdad",
+                GraduationYear = 2134,
+                GraduationQualification = "axczdscfasd",
+                GraduationSpecialty = "xsxczfa"
+            };
+
+            Interruption interruption = new Interruption
+            {
+                GraduateId = 1,
+                InterruptionYear = 3432,
+                InterruptionReason = "sdfsdfdasf"
+            };
+
+            PapersCount papersCount = new PapersCount
+            { 
+                GraduateId = 1,
+                ActCount = 21,
+                MonoCount = 12
+            };
+
+            Restoration restoration = new Restoration
+            {
+                GraduateId = 1,
+                RestorationYear = 2333
+            };
+
+            SemiAnnualCertification certification = new SemiAnnualCertification
+            {
+                GraduateId = 1,
+                CertificationResults = "21adsfasdf"
+            };
+
+            ThesesCount thesesCount = new ThesesCount
+            {
+                GraduateId = 1,
+                YearOneTheses = 1,
+                YearTwoTheses = 2,
+                YearThreeTheses = 4,
+                YearFourTheses = 5,
+                YearFiveTheses = 6
+            };
+
+            Transfer transfer = new Transfer
+            {
+                GraduateId = 1,
+                TransferInfo = "asdfsdfdasfdasfasdvf"
+            };
+
             GraduatesBaseData<Adviser>.AddData(adviser);
             GraduatesBaseData<Graduate>.AddData(graduate);
             GraduatesBaseData<ArticlesCount>.AddData(articles1);
+            GraduatesBaseData<Expulsion>.AddData(expulsion);
+            GraduatesBaseData<GraduateMastersDegree>.AddData(mastersDegree);
+            GraduatesBaseData<HigherEducationGraduation>.AddData(higherEducation);
+            GraduatesBaseData<Interruption>.AddData(interruption);
+            GraduatesBaseData<PapersCount>.AddData(papersCount);
+            GraduatesBaseData<Restoration>.AddData(restoration);
+            GraduatesBaseData<SemiAnnualCertification>.AddData(certification);
+            GraduatesBaseData<ThesesCount>.AddData(thesesCount);
+            GraduatesBaseData<Transfer>.AddData(transfer);
 
             List<ArticlesCount> articles =  (List<ArticlesCount>)GraduatesBaseData<ArticlesCount>.GetData();
 
