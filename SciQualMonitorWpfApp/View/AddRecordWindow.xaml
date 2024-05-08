@@ -28,6 +28,95 @@
                 <Button x:Name="btnClose" Content="X" Width="30" Height="30" Foreground="AliceBlue" BorderThickness="0"
                     BorderBrush="Transparent" Background="Transparent" Click="btnClose_Click"/>
             </StackPanel>
+            <TabControl x:Name="tabControl" Grid.Row="1" TabStripPlacement="Left" BorderThickness="0" Background="White">
+                <TabControl.Resources>
+                    <Style TargetType="{x:Type TabPanel}">
+                        <Setter Property="VerticalAlignment" Value="Center" />
+                    </Style>
+                    <Style TargetType="TabItem">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="TabItem">
+                                    <Grid Name="Panel">
+                                        <ContentPresenter x:Name="ContentSite"
+                                                 VerticalAlignment="Center"
+                                                 HorizontalAlignment="Left"
+                                                 ContentSource="Header"
+                                                 Margin="10,2"/>    
+                                        <Border Name="Border" BorderThickness = "5,0,0,0"/>
+                                    </Grid>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="Border" Property="BorderBrush" Value="#2371D5"/>
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="False">
+                                            <Setter TargetName="Border" Property="BorderBrush" Value="White"/>
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="Panel" Property="Background" Value="AliceBlue"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </TabControl.Resources>
+                <TabItem Header="Общие сведения" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Высшее образование" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Магистратура" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Аспирантура (институт соискательства)" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Результативность подготовки" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Переводы из других УВО" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Отчисления" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Прерывание срока обучения" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Восстановление" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Выпуск" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Научный руководитель" Height="40" Margin="0">
+                    <Grid Background="AliceBlue">
+
+                    </Grid>
+                </TabItem>
+            </TabControl>
         </Grid>
     </Grid>
 </Window>
