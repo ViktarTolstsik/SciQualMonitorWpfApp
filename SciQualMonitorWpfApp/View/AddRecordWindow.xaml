@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="GraduateDetails" Height="500" Width="900"
         WindowStartupLocation="CenterOwner" WindowStyle="None"
-         MinHeight="500" MinWidth="900"
+         MinHeight="600" MinWidth="900"
         FontFamily="Century Gothic">
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0" CornerRadius="5" CaptionHeight="0"/>
@@ -17,6 +17,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <Border Grid.Row="1" Background="White"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="1">
@@ -28,7 +29,7 @@
                 <Button x:Name="btnClose" Content="X" Width="30" Height="30" Foreground="AliceBlue" BorderThickness="0"
                     BorderBrush="Transparent" Background="Transparent" Click="btnClose_Click"/>
             </StackPanel>
-            <TabControl x:Name="tabControl" Grid.Row="1" TabStripPlacement="Left" BorderThickness="0" Background="White">
+            <TabControl x:Name="tabControl" Grid.Row="1" TabStripPlacement="Left" BorderThickness="0" Background="AliceBlue">
                 <TabControl.Resources>
                     <Style TargetType="{x:Type TabPanel}">
                         <Setter Property="VerticalAlignment" Value="Center" />
@@ -52,6 +53,15 @@
                                         <Trigger Property="IsSelected" Value="False">
                                             <Setter TargetName="Border" Property="BorderBrush" Value="White"/>
                                         </Trigger>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsSelected" Value="True"/>
+                                                <Condition Property="IsMouseOver" Value="False"/>
+                                            </MultiTrigger.Conditions>
+                                            <MultiTrigger.Setters>
+                                                <Setter TargetName="Panel" Property="Background" Value="AliceBlue"/>
+                                            </MultiTrigger.Setters>
+                                        </MultiTrigger>
                                         <Trigger Property="IsMouseOver" Value="True">
                                             <Setter TargetName="Panel" Property="Background" Value="AliceBlue"/>
                                         </Trigger>
@@ -117,6 +127,13 @@
                     </Grid>
                 </TabItem>
             </TabControl>
+            <Border Grid.Row="2" Background="White" BorderThickness="0"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="right" Grid.Row="2">
+                <Button  Content="✔" Width="50" Height="50" Foreground="#2371D5" BorderThickness="0" Padding="0,0,0,3" ToolTip="Сохранить"
+         BorderBrush="Transparent" Background="Transparent" FontSize="25" Click="btnMinimize_Click"/>
+                <Button Content="❌" Width="50" Height="50" Foreground="#2371D5" BorderThickness="0" ToolTip="Отменить"
+         BorderBrush="Transparent" Background="Transparent" FontSize="25" Click="btnClose_Click"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>
