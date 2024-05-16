@@ -22,17 +22,17 @@
         <Border Grid.Row="0" Background="#2371D5"/>
         <Border Grid.Row="2" Background="White" BorderBrush="#2371D5" BorderThickness="0,2,0,0"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-            <TextBlock Text="TitlePlaceholder" VerticalAlignment="Center" Margin="5" Foreground="AliceBlue"/>
+            <TextBlock Text="TitlePlaceholder" VerticalAlignment="Center" Margin="5" Foreground="AliceBlue" FontSize="20"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
             <Button x:Name="loginButton" Content="👤" Width="40" Height="40" Margin="0 0 40 0" Foreground="AliceBlue" BorderThickness="0"
-                    BorderBrush="Transparent" Background="Transparent" ToolTip="Авторизация" Cursor="Hand"/>
+                    FontSize="20" BorderBrush="Transparent" Background="Transparent" ToolTip="Авторизация" Cursor="Hand"/>
             <Button x:Name="btnMinimize" Content="_" Width="40" Height="40" Foreground="AliceBlue" BorderThickness="0"
-                    BorderBrush="Transparent" Background="Transparent" Click="btnMinimize_Click"/>
+                    FontSize="20" BorderBrush="Transparent" Background="Transparent" Click="btnMinimize_Click"/>
             <Button x:Name="btnMaximize" Content="🗖" Width="40" Height="40" Foreground="AliceBlue" BorderThickness="0"
-                    BorderBrush="Transparent" Background="Transparent" Click="btnMaximize_Click"/>
+                    FontSize="20" BorderBrush="Transparent" Background="Transparent" Click="btnMaximize_Click"/>
             <Button x:Name="btnClose" Content="X" Width="40" Height="40" Foreground="AliceBlue" BorderThickness="0"
-                    BorderBrush="Transparent" Background="Transparent" Click="btnClose_Click"/>
+                    FontSize="20" BorderBrush="Transparent" Background="Transparent" Click="btnClose_Click"/>
         </StackPanel>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
