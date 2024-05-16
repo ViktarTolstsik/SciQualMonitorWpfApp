@@ -21,7 +21,7 @@
             </Grid.RowDefinitions>
             <Border Grid.Row="1" Background="White"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="1">
-                <Label Content="Добавить запись" Foreground="AliceBlue" FontSize="15" Margin="5,0,0,0"/>
+                <Label Content="ДОБАВИТЬ ЗАПИСЬ" Foreground="AliceBlue" FontSize="15" Margin="5,0,0,0"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1">
                 <Button x:Name="btnMinimize" Content="_" Width="30" Height="30" Foreground="AliceBlue" BorderThickness="0" Padding="0,0,0,3"
@@ -143,17 +143,22 @@
                 </TabItem>
                 <TabItem Header="Научный руководитель" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
-                        <ComboBox HorizontalAlignment="Left" Margin="34,149,0,0" VerticalAlignment="Top" Width="455" 
-                                  Focusable="False" IsEditable="False" IsReadOnly="True" Text="выбрать из списка">
-                            <ComboBoxItem Content="asdfasdf"/>
-                            <ComboBoxItem Content="xczxczv"/>
-                            <ComboBoxItem Content="asdfxctghgfhasdf"/>
-                            <ComboBoxItem Content="ytjghf"/>
+                        <ComboBox x:Name="advisersComboBox" HorizontalAlignment="Left" Margin="35,150,0,0" VerticalAlignment="Top" Width="455" 
+                                  Focusable="False" IsEditable="False" IsReadOnly="True" FontSize="15" MaxDropDownHeight="350">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock>
+                                        <Run Text="{Binding Surname}"/>
+                                        <Run Text="{Binding Name}"/>
+                                        <Run Text="{Binding Patronym}"/>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
                         </ComboBox>
                         <Label Content="НАУЧНЫЙ РУКОВОДИТЕЛЬ" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
-                        <Label Content="Выбрать из списка" HorizontalAlignment="Left" Margin="34,116,0,0" VerticalAlignment="Top" FontSize="15"/>
-                        <Button Content="➕" ToolTip="Добавить нового руководителя" HorizontalAlignment="Left" Margin="34,217,0,0" VerticalAlignment="Top" 
-                                BorderThickness="0" BorderBrush="Transparent" Background="#2371D5" Foreground="AliceBlue" Height="50" Width="50" FontSize="30"/>
+                        <Label Content="Выбрать из списка" HorizontalAlignment="Left" Margin="35,120,0,0" VerticalAlignment="Top" FontSize="15"/>
+                        <Button x:Name="AddAdviserButton" Content="➕" ToolTip="Добавить нового руководителя" HorizontalAlignment="Left" Margin="35,220,0,0" VerticalAlignment="Top" Cursor="Hand"
+                                BorderThickness="0" BorderBrush="Transparent" Background="#2371D5" Foreground="AliceBlue" Height="50" Width="50" FontSize="30" Click="AddAdviserButton_Click"/>
 
 
                     </Grid>
@@ -162,9 +167,9 @@
             <Border Grid.Row="2" Background="White" BorderThickness="0"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="right" Grid.Row="2">
                 <Button  Content="✔" Width="50" Height="50" Foreground="#2371D5" BorderThickness="0" Padding="0,0,0,3" ToolTip="Сохранить"
-         BorderBrush="Transparent" Background="Transparent" FontSize="25" Click="btnMinimize_Click"/>
+         BorderBrush="Transparent" Background="Transparent" FontSize="25" Click="btnMinimize_Click" Cursor="Hand"/>
                 <Button Content="❌" Width="50" Height="50" Foreground="#2371D5" BorderThickness="0" ToolTip="Отменить"
-         BorderBrush="Transparent" Background="Transparent" FontSize="25" Click="btnClose_Click"/>
+         BorderBrush="Transparent" Background="Transparent" FontSize="25" Click="btnClose_Click" Cursor="Hand"/>
             </StackPanel>
         </Grid>
     </Grid>

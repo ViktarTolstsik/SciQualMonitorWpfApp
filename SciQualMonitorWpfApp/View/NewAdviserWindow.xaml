@@ -1,0 +1,42 @@
+﻿<Window x:Class="SciQualMonitorWpfApp.View.NewAdviserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SciQualMonitorWpfApp.View"
+        mc:Ignorable="d"
+        Title="NewAdviserWindow"
+        WindowStartupLocation="CenterOwner" WindowStyle="None"
+        Height="400" Width="500" FontFamily="Century Gothic">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="5" CaptionHeight="0"/>
+    </WindowChrome.WindowChrome>
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="#2371D5"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <TextBlock Text="ДОБАВИТЬ НОВОГО РУКОВОДИТЕЛЯ" VerticalAlignment="Center" Margin="5" Foreground="AliceBlue" FontSize="15"/>
+        </StackPanel>
+        <Border Grid.Row="2" Background="AliceBlue" BorderThickness="0"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="right" Grid.Row="2">
+            <Button  Content="✔" Width="50" Height="50" Foreground="#2371D5" BorderThickness="0" Padding="0,0,0,3" ToolTip="Сохранить"
+                    BorderBrush="Transparent" Background="Transparent" FontSize="25" Click="saveButton_Click" Cursor="Hand"/>
+            <Button Content="❌" Width="50" Height="50" Foreground="#2371D5" BorderThickness="0" ToolTip="Отменить"
+                    BorderBrush="Transparent" Background="Transparent" FontSize="25" Click="btnClose_Click" Cursor="Hand"/>
+        </StackPanel>
+        <TextBox x:Name="surnameTextBox" HorizontalAlignment="Left" Margin="50,50,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="15"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="left" Margin="200,50,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="15"/>
+        <TextBox x:Name="patronymTextBox" HorizontalAlignment="Left" Margin="350,50,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="15"/>
+        <TextBox x:Name="degreeTextBox" HorizontalAlignment="Left" Margin="50,130,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" FontSize="15"/>
+        <TextBox x:Name="specialtyTextBox" HorizontalAlignment="Left" Margin="50,220,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" FontSize="15"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="50,20,0,0" Grid.Row="1" VerticalAlignment="Top" Padding="0,5"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="200,20,0,0" Grid.Row="1" VerticalAlignment="Top" Padding="0,5"/>
+        <Label Content="Отчество" HorizontalAlignment="Left" Margin="350,20,0,0" Grid.Row="1" VerticalAlignment="Top" Padding="0,5"/>
+        <Label Content="Ученая степень" HorizontalAlignment="Left" Margin="50,100,0,0" Grid.Row="1" VerticalAlignment="Top" Padding="0,5"/>
+        <Label Content="Специальность" HorizontalAlignment="Left" Margin="50,190,0,0" Grid.Row="1" VerticalAlignment="Top" Padding="0,5"/>
+    </Grid>
+</Window>

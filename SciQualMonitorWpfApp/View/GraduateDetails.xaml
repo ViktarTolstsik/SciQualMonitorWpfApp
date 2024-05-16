@@ -22,7 +22,7 @@
             </Grid.RowDefinitions>
             <Border Grid.Row="1" Background="White"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="1">
-                <Label Content="Просмотр сведений" Foreground="AliceBlue" FontSize="15" Margin="5,0,0,0" />
+                <Label Content="ПРОСМОТР СВЕДЕНИЙ" Foreground="AliceBlue" FontSize="15" Margin="5,0,0,0" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1">
                 <Button x:Name="btnMinimize" Content="_" Width="30" Height="30" Foreground="AliceBlue" BorderThickness="0" Padding="0,0,0,3"
