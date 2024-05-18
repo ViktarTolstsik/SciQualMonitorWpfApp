@@ -111,7 +111,8 @@ namespace SciQualMonitorWpfApp
 
         private void addRecordsButton_Click(object sender, RoutedEventArgs e)
         {
-            AddRecordWindow addRecordWindow = new AddRecordWindow();
+            int lastRecordId = graduates.Max(x => x.Id);
+            AddRecordWindow addRecordWindow = new AddRecordWindow(lastRecordId);
             addRecordWindow.Owner = this;
             this.Opacity = 0.9;
             this.Effect = new BlurEffect();

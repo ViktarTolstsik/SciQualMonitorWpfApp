@@ -24,11 +24,13 @@ namespace SciQualMonitorWpfApp.View
     public partial class AddRecordWindow : Window
     {
         public ObservableCollection<Adviser> advisers { get; set; }
-        public AddRecordWindow()
+        public int NewRecordId { get; set; }
+        public AddRecordWindow(int lastRecordId)
         {
             InitializeComponent();
             advisers = new ObservableCollection<Adviser>(GraduatesBaseData<Adviser>.GetAdvisers());
             advisersComboBox.ItemsSource = advisers;
+            NewRecordId = lastRecordId + 1;
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
