@@ -101,7 +101,16 @@ namespace SciQualMonitorWpfApp
 
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
+            Graduate selectedGraduate = dataGrid.SelectedItem as Graduate;
 
+            EditRecordWindow editWindow = new EditRecordWindow();
+            editWindow.Owner = this;
+            this.Opacity = 0.9;
+            this.Effect = new BlurEffect();
+            editWindow.ShowDialog();
+
+            this.Opacity = 1;
+            this.Effect = null;
         }
 
         private void refreshButton_Click(object sender, RoutedEventArgs e)

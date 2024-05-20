@@ -1,13 +1,13 @@
-﻿<Window x:Class="SciQualMonitorWpfApp.View.AddRecordWindow"
+﻿<Window x:Class="SciQualMonitorWpfApp.View.EditRecordWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SciQualMonitorWpfApp.View"
         mc:Ignorable="d"
-        Title="AddRecord" Height="500" Width="900"
+        Title="EditRecord" Height="500" Width="900"
         WindowStartupLocation="CenterOwner" WindowStyle="None"
-         MinHeight="600" MinWidth="900"
+        MinHeight="600" MinWidth="900"
         FontFamily="Century Gothic">
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0" CornerRadius="5" CaptionHeight="0"/>
@@ -21,13 +21,13 @@
             </Grid.RowDefinitions>
             <Border Grid.Row="1" Background="White"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="1">
-                <Label Content="ДОБАВИТЬ ЗАПИСЬ" Foreground="AliceBlue" FontSize="15" Margin="5,0,0,0"/>
+                <Label Content="РЕДАКТИРОВАТЬ ЗАПИСЬ" Foreground="AliceBlue" FontSize="15" Margin="5,0,0,0"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1">
                 <Button x:Name="btnMinimize" Content="_" Width="30" Height="30" Foreground="AliceBlue" BorderThickness="0" Padding="0,0,0,3"
-                    FontSize="20" BorderBrush="Transparent" Background="Transparent" Click="btnMinimize_Click"/>
+                FontSize="20" BorderBrush="Transparent" Background="Transparent" Click="btnMinimize_Click"/>
                 <Button x:Name="btnClose" Content="X" Width="30" Height="30" Foreground="AliceBlue" BorderThickness="0"
-                    FontSize="20" BorderBrush="Transparent" Background="Transparent" Click="btnClose_Click"/>
+                FontSize="20" BorderBrush="Transparent" Background="Transparent" Click="btnClose_Click"/>
             </StackPanel>
             <TabControl x:Name="tabControl" Grid.Row="1" TabStripPlacement="Left" BorderThickness="0" Background="AliceBlue">
                 <TabControl.Resources>
@@ -40,10 +40,10 @@
                                 <ControlTemplate TargetType="TabItem">
                                     <Grid Name="Panel">
                                         <ContentPresenter x:Name="ContentSite"
-                                                 VerticalAlignment="Center"
-                                                 HorizontalAlignment="Left"
-                                                 ContentSource="Header"
-                                                 Margin="10,2"/>
+                                             VerticalAlignment="Center"
+                                             HorizontalAlignment="Left"
+                                             ContentSource="Header"
+                                             Margin="10,2"/>
                                         <Border Name="Border" BorderThickness = "5,0,0,0"/>
                                     </Grid>
                                     <ControlTemplate.Triggers>
@@ -197,7 +197,7 @@
                         <Label Content="ВОССТАНОВЛЕНИЕ" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
                         <Label Content="Label" HorizontalAlignment="Left" Margin="50,90,0,0" VerticalAlignment="Top" Padding="0"/>
                         <ComboBox HorizontalAlignment="Left" Margin="50,125,0,0" VerticalAlignment="Top" Width="40"/>
- 
+
                     </Grid>
                 </TabItem>
                 <TabItem Header="Выпуск" Height="40" Margin="0">
@@ -215,13 +215,13 @@
                 <TabItem Header="Научный руководитель" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
                         <ComboBox x:Name="advisersComboBox" HorizontalAlignment="Left" Margin="35,150,0,0" VerticalAlignment="Top" Width="455" 
-                                  Focusable="False" IsEditable="False" IsReadOnly="True" FontSize="15" MaxDropDownHeight="350">
+                              Focusable="False" IsEditable="False" IsReadOnly="True" FontSize="15" MaxDropDownHeight="350">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate>
                                     <TextBlock>
-                                        <Run Text="{Binding Surname}"/>
-                                        <Run Text="{Binding Name}"/>
-                                        <Run Text="{Binding Patronym}"/>
+                                    <Run Text="{Binding Surname}"/>
+                                    <Run Text="{Binding Name}"/>
+                                    <Run Text="{Binding Patronym}"/>
                                     </TextBlock>
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
@@ -229,7 +229,7 @@
                         <Label Content="НАУЧНЫЙ РУКОВОДИТЕЛЬ" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
                         <Label Content="Выбрать из списка" HorizontalAlignment="Left" Margin="35,120,0,0" VerticalAlignment="Top" FontSize="15"/>
                         <Button x:Name="AddAdviserButton" Content="➕" ToolTip="Добавить нового руководителя" HorizontalAlignment="Left" Margin="35,220,0,0" VerticalAlignment="Top" Cursor="Hand"
-                                BorderThickness="0" BorderBrush="Transparent" Background="#2371D5" Foreground="AliceBlue" Height="50" Width="50" FontSize="30" Click="AddAdviserButton_Click"/>
+                            BorderThickness="0" BorderBrush="Transparent" Background="#2371D5" Foreground="AliceBlue" Height="50" Width="50" FontSize="30" Click="AddAdviserButton_Click"/>
 
 
                     </Grid>
@@ -238,9 +238,9 @@
             <Border Grid.Row="2" Background="White" BorderThickness="0"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="right" Grid.Row="2">
                 <Button  Content="✔" Width="50" Height="50" Foreground="#2371D5" BorderThickness="0" Padding="0,0,0,3" ToolTip="Сохранить"
-         BorderBrush="Transparent" Background="Transparent" FontSize="25" Click="btnMinimize_Click" Cursor="Hand"/>
+     BorderBrush="Transparent" Background="Transparent" FontSize="25" Click="btnMinimize_Click" Cursor="Hand"/>
                 <Button Content="❌" Width="50" Height="50" Foreground="#2371D5" BorderThickness="0" ToolTip="Отменить"
-         BorderBrush="Transparent" Background="Transparent" FontSize="25" Click="btnClose_Click" Cursor="Hand"/>
+     BorderBrush="Transparent" Background="Transparent" FontSize="25" Click="btnClose_Click" Cursor="Hand"/>
             </StackPanel>
         </Grid>
     </Grid>
