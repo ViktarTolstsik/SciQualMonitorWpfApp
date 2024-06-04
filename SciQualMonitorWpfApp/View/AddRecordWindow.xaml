@@ -74,147 +74,177 @@
                 <TabItem Header="Общие сведения" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
                         <Label Content="ОБЩИЕ СВЕДЕНИЯ" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
-                        <TextBox HorizontalAlignment="Left" Margin="52,58,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                        <TextBox HorizontalAlignment="Left" Margin="195,58,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                        <TextBox HorizontalAlignment="Left" Margin="351,58,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="52,133,0,0" VerticalAlignment="Top" Width="120"/>
-                        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="52,208,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="195,208,0,0" VerticalAlignment="Top"/>
-                        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="52,258,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.265"/>
-                        <TextBox HorizontalAlignment="Left" Margin="52,306,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                        <TextBox HorizontalAlignment="Left" Margin="351,306,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="202" Height="58"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="52,408,0,0" VerticalAlignment="Top" Width="120"/>
-
+                        <TextBox HorizontalAlignment="Left" Margin="55,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+                        <TextBox HorizontalAlignment="Left" Margin="225,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+                        <TextBox HorizontalAlignment="Left" Margin="390,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,160,0,0" VerticalAlignment="Top" Width="40"/>
+                        <RadioButton Content="Мужской" HorizontalAlignment="Left" Margin="55,235,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Женский" HorizontalAlignment="Left" Margin="195,235,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Иностранец" HorizontalAlignment="Left" Margin="56,285,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.265"/>
+                        <TextBox HorizontalAlignment="Left" Margin="55,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        <TextBox HorizontalAlignment="Left" Margin="350,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="58"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,435,0,0" VerticalAlignment="Top" Width="120">
+                            <ComboBoxItem Content="Аспирант"/>
+                            <ComboBoxItem Content="Соискатель"/>
+                        </ComboBox>
+                        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="55,60,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Имя" HorizontalAlignment="Left" Margin="225,60,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Отчество" HorizontalAlignment="Left" Margin="390,60,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Год рождения" HorizontalAlignment="Left" Margin="55,130,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Пол" HorizontalAlignment="Left" Margin="55,205,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Страна" HorizontalAlignment="Left" Margin="55,315,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Комментарии" HorizontalAlignment="Left" Margin="350,315,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Учащийся" HorizontalAlignment="Left" Margin="55,405,0,0" VerticalAlignment="Top" Padding="0"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Высшее образование" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
                         <Label Content="ВЫСШЕЕ ОБРАЗОВАНИЕ" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
-                        <TextBox HorizontalAlignment="Left" Margin="50,100,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="50,187,0,0" VerticalAlignment="Top" Width="120"/>
-                        <TextBox HorizontalAlignment="Left" Margin="50,280,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220"/>
-                        <TextBox HorizontalAlignment="Left" Margin="50,364,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220"/>
-
+                        <TextBox HorizontalAlignment="Left" Margin="55,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,185,0,0" VerticalAlignment="Top" Width="40"/>
+                        <TextBox HorizontalAlignment="Left" Margin="55,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+                        <TextBox HorizontalAlignment="Left" Margin="55,365,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+                        <Label Content="Название УВО" HorizontalAlignment="Left" Margin="55,70,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Год окончания" HorizontalAlignment="Left" Margin="55,155,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Специальность по диплому" HorizontalAlignment="Left" Margin="55,250,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Квалификация по диплому" HorizontalAlignment="Left" Margin="55,335,0,0" VerticalAlignment="Top" Padding="0"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Магистратура" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
                         <Label Content="МАГИСТРАТУРА" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="50,122,0,0" VerticalAlignment="Top" Width="120"/>
-                        <TextBox HorizontalAlignment="Left" Margin="50,200,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320"/>
-
+                        <ComboBox HorizontalAlignment="Left" Margin="55,125,0,0" VerticalAlignment="Top" Width="40"/>
+                        <TextBox HorizontalAlignment="Left" Margin="55,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320"/>
+                        <Label Content="Год окончания" HorizontalAlignment="Left" Margin="55,95,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Тема магистерской диссертации" HorizontalAlignment="Left" Margin="55,190,0,0" VerticalAlignment="Top" Padding="0"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Аспирантура (институт соискательства)" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
                         <Label Content="АСПИРАНТУРА (ИНСТИТУТ СОИСКАТЕЛЬСТВА)" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="25"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="50,93,0,0" VerticalAlignment="Top" Width="120"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="267,93,0,0" VerticalAlignment="Top" Width="120"/>
-                        <TextBox HorizontalAlignment="Left" Margin="50,190,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                        <TextBox HorizontalAlignment="Left" Margin="50,258,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="50,328,0,0" VerticalAlignment="Top" Width="120"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="50,391,0,0" VerticalAlignment="Top" Width="120"/>
-
+                        <ComboBox HorizontalAlignment="Left" Margin="55,95,0,0" VerticalAlignment="Top" Width="40"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="265,95,0,0" VerticalAlignment="Top" Width="40"/>
+                        <TextBox HorizontalAlignment="Left" Margin="55,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        <TextBox HorizontalAlignment="Left" Margin="55,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,330,0,0" VerticalAlignment="Top" Width="120"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,400,0,0" VerticalAlignment="Top" Width="300"/>
+                        <Label Content="Год поступления в БИП" HorizontalAlignment="Left" Margin="55,65,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Год заключения контракта" HorizontalAlignment="Left" Margin="265,65,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Тема диссертации" HorizontalAlignment="Left" Margin="55,160,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Специальность" HorizontalAlignment="Left" Margin="55,230,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Форма обучения" HorizontalAlignment="Left" Margin="55,300,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Кафедра" HorizontalAlignment="Left" Margin="55,370,0,0" VerticalAlignment="Top" Padding="0"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Результативность подготовки" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
                         <Label Content="РЕЗУЛЬТАТИВНОСТЬ ПОДГОТОВКИ" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,90,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Аттестация по полугодиям" HorizontalAlignment="Left" Margin="55,65,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="1-й год" HorizontalAlignment="Left" Margin="55,90,0,0" VerticalAlignment="Top" Padding="0"/>
                         <CheckBox Content="1" HorizontalAlignment="Left" Margin="125,90,0,0" VerticalAlignment="Top"/>
                         <CheckBox Content="2" HorizontalAlignment="Left" Margin="200,90,0,0" VerticalAlignment="Top"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,120,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="2-й год" HorizontalAlignment="Left" Margin="55,120,0,0" VerticalAlignment="Top" Padding="0"/>
                         <CheckBox Content="3" HorizontalAlignment="Left" Margin="125,120,0,0" VerticalAlignment="Top"/>
                         <CheckBox Content="4" HorizontalAlignment="Left" Margin="200,120,0,0" VerticalAlignment="Top"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,150,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="3-й год" HorizontalAlignment="Left" Margin="55,150,0,0" VerticalAlignment="Top" Padding="0"/>
                         <CheckBox Content="5" HorizontalAlignment="Left" Margin="125,150,0,0" VerticalAlignment="Top"/>
                         <CheckBox Content="6" HorizontalAlignment="Left" Margin="200,150,0,0" VerticalAlignment="Top"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,180,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="4-й год" HorizontalAlignment="Left" Margin="55,180,0,0" VerticalAlignment="Top" Padding="0"/>
                         <CheckBox Content="7" HorizontalAlignment="Left" Margin="125,180,0,0" VerticalAlignment="Top"/>
                         <CheckBox Content="8" HorizontalAlignment="Left" Margin="200,180,0,0" VerticalAlignment="Top"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,210,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="5-й год" HorizontalAlignment="Left" Margin="55,210,0,0" VerticalAlignment="Top" Padding="0"/>
                         <CheckBox Content="9" HorizontalAlignment="Left" Margin="125,210,0,0" VerticalAlignment="Top"/>
                         <CheckBox Content="10" HorizontalAlignment="Left" Margin="200,210,0,0" VerticalAlignment="Top"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,260,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,280,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="50,300,0,0" VerticalAlignment="Top" Width="35"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="100,280,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="100,300,0,0" VerticalAlignment="Top" Width="35"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="150,280,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="150,300,0,0" VerticalAlignment="Top" Width="35"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="200,280,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="200,300,0,0" VerticalAlignment="Top" Width="35"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="250,280,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="250,300,0,0" VerticalAlignment="Top" Width="35"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="330,260,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="330,280,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="330,300,0,0" VerticalAlignment="Top" Width="35"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="380,280,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="380,300,0,0" VerticalAlignment="Top" Width="35"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="430,280,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="430,300,0,0" VerticalAlignment="Top" Width="35"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="480,280,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="480,300,0,0" VerticalAlignment="Top" Width="35"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="530,280,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="530,300,0,0" VerticalAlignment="Top" Width="35"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,360,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,380,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="50,400,0,0" VerticalAlignment="Top" Width="35"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="100,380,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="100,400,0,0" VerticalAlignment="Top" Width="35"/>
+                        <Label Content="Количество статей" HorizontalAlignment="Left" Margin="55,260,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="1-й год" HorizontalAlignment="Left" Margin="55,290,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,310,0,0" VerticalAlignment="Top" Width="40"/>
+                        <Label Content="2-й год" HorizontalAlignment="Left" Margin="105,290,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="105,310,0,0" VerticalAlignment="Top" Width="40"/>
+                        <Label Content="3-й год" HorizontalAlignment="Left" Margin="155,290,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="155,310,0,0" VerticalAlignment="Top" Width="40"/>
+                        <Label Content="4-й год" HorizontalAlignment="Left" Margin="205,290,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="205,310,0,0" VerticalAlignment="Top" Width="40"/>
+                        <Label Content="5-й год" HorizontalAlignment="Left" Margin="255,290,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="255,310,0,0" VerticalAlignment="Top" Width="40"/>
+                        <Label Content="Количество тезисов" HorizontalAlignment="Left" Margin="335,260,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="1-й год" HorizontalAlignment="Left" Margin="335,290,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="335,310,0,0" VerticalAlignment="Top" Width="40"/>
+                        <Label Content="2-й год" HorizontalAlignment="Left" Margin="385,290,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="385,310,0,0" VerticalAlignment="Top" Width="40"/>
+                        <Label Content="3-й год" HorizontalAlignment="Left" Margin="435,290,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="435,310,0,0" VerticalAlignment="Top" Width="40"/>
+                        <Label Content="4-й год" HorizontalAlignment="Left" Margin="485,290,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="485,310,0,0" VerticalAlignment="Top" Width="40"/>
+                        <Label Content="5-й год" HorizontalAlignment="Left" Margin="535,290,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="535,310,0,0" VerticalAlignment="Top" Width="40"/>
+                        <Label Content="Общее количество" HorizontalAlignment="Left" Margin="55,360,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <Label Content="Монографии" HorizontalAlignment="Left" Margin="55,390,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,410,0,0" VerticalAlignment="Top" Width="35"/>
+                        <Label Content="Акты" HorizontalAlignment="Left" Margin="155,390,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="155,410,0,0" VerticalAlignment="Top" Width="35"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Переводы из других УВО" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
                         <Label Content="ПЕРЕВОДЫ ИЗ ДРУГИХ УВО" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,100,0,0" VerticalAlignment="Top"/>
-                        <TextBox HorizontalAlignment="Left" Margin="50,145,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="396" Height="80" VerticalScrollBarVisibility="Visible"/>
+                        <Label Content="Переводы" HorizontalAlignment="Left" Margin="55,100,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <TextBox HorizontalAlignment="Left" Margin="50,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="395" Height="80" VerticalScrollBarVisibility="Visible"/>
 
                     </Grid>
                 </TabItem>
                 <TabItem Header="Отчисления" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
                         <Label Content="ОТЧИСЛЕНИЯ" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,90,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="50,125,0,0" VerticalAlignment="Top" Width="40"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,180,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <TextBox HorizontalAlignment="Left" Margin="50,215,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="380" Height="80" VerticalScrollBarVisibility="Visible"/>
-
+                        <Label Content="Год отчисления" HorizontalAlignment="Left" Margin="55,90,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,120,0,0" VerticalAlignment="Top" Width="40"/>
+                        <Label Content="Причина отчисления" HorizontalAlignment="Left" Margin="55,180,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,210,0,0" VerticalAlignment="Top" Width="400">
+                            <ComboBoxItem Content="Отчислен в связи с переводом в другое УВО"/>
+                            <ComboBoxItem Content="Отчислен по собственному желанию"/>
+                            <ComboBoxItem Content="Отчислен за невыполнение индивидуального плана работы"/>
+                        </ComboBox>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Прерывание срока обучения" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
                         <Label Content="ПРЕРЫВАНИЕ СРОКА ОБУЧЕНИЯ" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,90,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="50,125,0,0" VerticalAlignment="Top" Width="40"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,180,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <TextBox HorizontalAlignment="Left" Margin="50,215,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="380" Height="80" VerticalScrollBarVisibility="Visible"/>
-
+                        <Label Content="Год прерывания" HorizontalAlignment="Left" Margin="55,90,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,120,0,0" VerticalAlignment="Top" Width="40"/>
+                        <Label Content="Причина прерывания" HorizontalAlignment="Left" Margin="55,180,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,210,0,0" VerticalAlignment="Top" Width="400">
+                            <ComboBoxItem Content="Академический отпуск"/>
+                            <ComboBoxItem Content="Отпуск по беременности и уходу за ребенком"/>
+                            <ComboBoxItem Content="Отпуск на время прохождения военной службы"/>
+                        </ComboBox>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Восстановление" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
                         <Label Content="ВОССТАНОВЛЕНИЕ" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,90,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="50,125,0,0" VerticalAlignment="Top" Width="40"/>
- 
+                        <Label Content="Год восстановления" HorizontalAlignment="Left" Margin="55,90,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,120,0,0" VerticalAlignment="Top" Width="40"/>
+
                     </Grid>
                 </TabItem>
                 <TabItem Header="Выпуск" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
                         <Label Content="ВЫПУСК" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,90,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="50,125,0,0" VerticalAlignment="Top" Width="40"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,180,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="50,215,0,0" VerticalAlignment="Top" Width="220"/>
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="50,270,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="50,305,0,0" VerticalAlignment="Top" Width="40"/>
+                        <Label Content="Год окончания аспирантуры (соискательства)" HorizontalAlignment="Left" Margin="55,90,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,120,0,0" VerticalAlignment="Top" Width="40"/>
+                        <Label Content="В текущем году" HorizontalAlignment="Left" Margin="55,180,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,210,0,0" VerticalAlignment="Top" Width="400">
+                            <ComboBoxItem Content="С выдачей диплома исследователя"/>
+                            <ComboBoxItem Content="Проведена предварительная экспертиза диссертации"/>
+                            <ComboBoxItem Content="С защитой диссертации в срок обучения"/>
+                        </ComboBox>
+                        <Label Content="Год защиты диссертации после выпуска" HorizontalAlignment="Left" Margin="55,270,0,0" VerticalAlignment="Top" Padding="0"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,300,0,0" VerticalAlignment="Top" Width="40"/>
 
                     </Grid>
                 </TabItem>
                 <TabItem Header="Научный руководитель" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
-                        <ComboBox x:Name="advisersComboBox" HorizontalAlignment="Left" Margin="35,150,0,0" VerticalAlignment="Top" Width="455" 
+                        <ComboBox x:Name="advisersComboBox" HorizontalAlignment="Left" Margin="55,150,0,0" VerticalAlignment="Top" Width="455" 
                                   Focusable="False" IsEditable="False" IsReadOnly="True" FontSize="15" MaxDropDownHeight="350">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate>
@@ -227,8 +257,8 @@
                             </ComboBox.ItemTemplate>
                         </ComboBox>
                         <Label Content="НАУЧНЫЙ РУКОВОДИТЕЛЬ" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
-                        <Label Content="Выбрать из списка" HorizontalAlignment="Left" Margin="35,120,0,0" VerticalAlignment="Top" FontSize="15"/>
-                        <Button x:Name="AddAdviserButton" Content="➕" ToolTip="Добавить нового руководителя" HorizontalAlignment="Left" Margin="35,220,0,0" VerticalAlignment="Top" Cursor="Hand"
+                        <Label Content="Выбрать из списка" HorizontalAlignment="Left" Margin="55,120,0,0" VerticalAlignment="Top" FontSize="15" Padding="0"/>
+                        <Button x:Name="AddAdviserButton" Content="➕" ToolTip="Добавить нового руководителя" HorizontalAlignment="Left" Margin="55,220,0,0" VerticalAlignment="Top" Cursor="Hand"
                                 BorderThickness="0" BorderBrush="Transparent" Background="#2371D5" Foreground="AliceBlue" Height="50" Width="50" FontSize="30" Click="AddAdviserButton_Click"/>
 
 
