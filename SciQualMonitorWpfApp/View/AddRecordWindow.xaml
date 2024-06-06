@@ -77,7 +77,7 @@
                         <TextBox HorizontalAlignment="Left" Margin="55,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" x:Name="surnameTextBox"/>
                         <TextBox HorizontalAlignment="Left" Margin="225,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" x:Name="firstNameTextBox"/>
                         <TextBox HorizontalAlignment="Left" Margin="390,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" x:Name="patronymTextBox"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="55,160,0,0" VerticalAlignment="Top" Width="40" x:Name="birthYearComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,160,0,0" VerticalAlignment="Top" Width="60" x:Name="birthYearComboBox"/>
                         <RadioButton Content="Мужской" HorizontalAlignment="Left" Margin="55,235,0,0" VerticalAlignment="Top" x:Name="genderMRadio"/>
                         <RadioButton Content="Женский" HorizontalAlignment="Left" Margin="195,235,0,0" VerticalAlignment="Top" x:Name="genderFRadio"/>
                         <CheckBox Content="Иностранец" HorizontalAlignment="Left" Margin="56,285,0,0" VerticalAlignment="Top" x:Name="foreignerCheckBox"/>
@@ -101,7 +101,7 @@
                     <Grid Background="AliceBlue">
                         <Label Content="ВЫСШЕЕ ОБРАЗОВАНИЕ" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
                         <TextBox HorizontalAlignment="Left" Margin="55,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" x:Name="higherEdInstTitleTextBox"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="55,185,0,0" VerticalAlignment="Top" Width="40" x:Name="higherEdGradYearComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,185,0,0" VerticalAlignment="Top" Width="60" x:Name="higherEdGradYearComboBox"/>
                         <TextBox HorizontalAlignment="Left" Margin="55,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" x:Name="higherEdSpecialtyTextBox"/>
                         <TextBox HorizontalAlignment="Left" Margin="55,365,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" x:Name="higherEdQualificationTextBox"/>
                         <Label Content="Название УВО" HorizontalAlignment="Left" Margin="55,70,0,0" VerticalAlignment="Top" Padding="0"/>
@@ -113,7 +113,7 @@
                 <TabItem Header="Магистратура" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
                         <Label Content="МАГИСТРАТУРА" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="55,125,0,0" VerticalAlignment="Top" Width="40" x:Name="mastersGradYearComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,125,0,0" VerticalAlignment="Top" Width="60" x:Name="mastersGradYearComboBox"/>
                         <TextBox HorizontalAlignment="Left" Margin="55,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" x:Name="mastersThesisThemeTextBox"/>
                         <Label Content="Год окончания" HorizontalAlignment="Left" Margin="55,95,0,0" VerticalAlignment="Top" Padding="0"/>
                         <Label Content="Тема магистерской диссертации" HorizontalAlignment="Left" Margin="55,190,0,0" VerticalAlignment="Top" Padding="0"/>
@@ -122,12 +122,26 @@
                 <TabItem Header="Аспирантура (институт соискательства)" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
                         <Label Content="АСПИРАНТУРА (ИНСТИТУТ СОИСКАТЕЛЬСТВА)" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="25"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="55,95,0,0" VerticalAlignment="Top" Width="40" x:Name="BIPAdmissionYearComboBox"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="265,95,0,0" VerticalAlignment="Top" Width="40" x:Name="BIPContractYearComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,95,0,0" VerticalAlignment="Top" Width="60" x:Name="BIPAdmissionYearComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="265,95,0,0" VerticalAlignment="Top" Width="60" x:Name="BIPContractYearComboBox"/>
                         <TextBox HorizontalAlignment="Left" Margin="55,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="BIPThesisThemeTextBox"/>
                         <TextBox HorizontalAlignment="Left" Margin="55,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="BIPSpecialtyTextBox"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="55,330,0,0" VerticalAlignment="Top" Width="120" x:Name="BIPStudyingFormComboBox"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="55,400,0,0" VerticalAlignment="Top" Width="300" x:Name="BIPDepartmentComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,330,0,0" VerticalAlignment="Top" Width="120" x:Name="BIPStudyingFormComboBox">
+                            <ComboBoxItem Content="Дневная"/>
+                            <ComboBoxItem Content="Заочная"/>
+                        </ComboBox>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,400,0,0" VerticalAlignment="Top" Width="400" x:Name="BIPDepartmentComboBox">
+                            <ComboBoxItem Content="Теории и истории права"/>
+                            <ComboBoxItem Content="Гражданского права и процесса"/>
+                            <ComboBoxItem Content="Уголовного права и процеса"/>
+                            <ComboBoxItem Content="Международного права"/>
+                            <ComboBoxItem Content="Иностранных языков"/>
+                            <ComboBoxItem Content="Политологии и международных политических процессов"/>
+                            <ComboBoxItem Content="Информационных технологий и математики"/>
+                            <ComboBoxItem Content="Психологии и педагогики"/>
+                            <ComboBoxItem Content="Экономики и менеджмента"/>
+                            <ComboBoxItem Content="Экономического и финансового права"/>
+                        </ComboBox>
                         <Label Content="Год поступления в БИП" HorizontalAlignment="Left" Margin="55,65,0,0" VerticalAlignment="Top" Padding="0"/>
                         <Label Content="Год заключения контракта" HorizontalAlignment="Left" Margin="265,65,0,0" VerticalAlignment="Top" Padding="0"/>
                         <Label Content="Тема диссертации" HorizontalAlignment="Left" Margin="55,160,0,0" VerticalAlignment="Top" Padding="0"/>
@@ -157,38 +171,38 @@
                         <CheckBox Content="10" HorizontalAlignment="Left" Margin="200,210,0,0" VerticalAlignment="Top" x:Name="semiAnnualCheckBox10"/>
                         <Label Content="Количество статей" HorizontalAlignment="Left" Margin="55,260,0,0" VerticalAlignment="Top" Padding="0"/>
                         <Label Content="1-й год" HorizontalAlignment="Left" Margin="55,290,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="55,310,0,0" VerticalAlignment="Top" Width="40" x:Name="articlesCountYear1ComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,310,0,0" VerticalAlignment="Top" Width="45" x:Name="articlesCountYear1ComboBox"/>
                         <Label Content="2-й год" HorizontalAlignment="Left" Margin="105,290,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="105,310,0,0" VerticalAlignment="Top" Width="40" x:Name="articlesCountYear2ComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="105,310,0,0" VerticalAlignment="Top" Width="45" x:Name="articlesCountYear2ComboBox"/>
                         <Label Content="3-й год" HorizontalAlignment="Left" Margin="155,290,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="155,310,0,0" VerticalAlignment="Top" Width="40" x:Name="articlesCountYear3ComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="155,310,0,0" VerticalAlignment="Top" Width="45" x:Name="articlesCountYear3ComboBox"/>
                         <Label Content="4-й год" HorizontalAlignment="Left" Margin="205,290,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="205,310,0,0" VerticalAlignment="Top" Width="40" x:Name="articlesCountYear4ComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="205,310,0,0" VerticalAlignment="Top" Width="45" x:Name="articlesCountYear4ComboBox"/>
                         <Label Content="5-й год" HorizontalAlignment="Left" Margin="255,290,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="255,310,0,0" VerticalAlignment="Top" Width="40" x:Name="articlesCountYear5ComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="255,310,0,0" VerticalAlignment="Top" Width="45" x:Name="articlesCountYear5ComboBox"/>
                         <Label Content="Количество тезисов" HorizontalAlignment="Left" Margin="335,260,0,0" VerticalAlignment="Top" Padding="0"/>
                         <Label Content="1-й год" HorizontalAlignment="Left" Margin="335,290,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="335,310,0,0" VerticalAlignment="Top" Width="40" x:Name="thesesCountYear1ComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="335,310,0,0" VerticalAlignment="Top" Width="45" x:Name="thesesCountYear1ComboBox"/>
                         <Label Content="2-й год" HorizontalAlignment="Left" Margin="385,290,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="385,310,0,0" VerticalAlignment="Top" Width="40" x:Name="thesesCountYear2ComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="385,310,0,0" VerticalAlignment="Top" Width="45" x:Name="thesesCountYear2ComboBox"/>
                         <Label Content="3-й год" HorizontalAlignment="Left" Margin="435,290,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="435,310,0,0" VerticalAlignment="Top" Width="40" x:Name="thesesCountYear3ComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="435,310,0,0" VerticalAlignment="Top" Width="45" x:Name="thesesCountYear3ComboBox"/>
                         <Label Content="4-й год" HorizontalAlignment="Left" Margin="485,290,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="485,310,0,0" VerticalAlignment="Top" Width="40" x:Name="thesesCountYear4ComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="485,310,0,0" VerticalAlignment="Top" Width="45" x:Name="thesesCountYear4ComboBox"/>
                         <Label Content="5-й год" HorizontalAlignment="Left" Margin="535,290,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="535,310,0,0" VerticalAlignment="Top" Width="40" x:Name="thesesCountYear5ComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="535,310,0,0" VerticalAlignment="Top" Width="45" x:Name="thesesCountYear5ComboBox"/>
                         <Label Content="Общее количество" HorizontalAlignment="Left" Margin="55,360,0,0" VerticalAlignment="Top" Padding="0"/>
                         <Label Content="Монографии" HorizontalAlignment="Left" Margin="55,390,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="55,410,0,0" VerticalAlignment="Top" Width="35" x:Name="monoCountComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,410,0,0" VerticalAlignment="Top" Width="45" x:Name="monoCountComboBox"/>
                         <Label Content="Акты" HorizontalAlignment="Left" Margin="155,390,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="155,410,0,0" VerticalAlignment="Top" Width="35" x:Name="actCountComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="155,410,0,0" VerticalAlignment="Top" Width="45" x:Name="actCountComboBox"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Переводы из других УВО" Height="40" Margin="0">
                     <Grid Background="AliceBlue">
                         <Label Content="ПЕРЕВОДЫ ИЗ ДРУГИХ УВО" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
                         <Label Content="Переводы" HorizontalAlignment="Left" Margin="55,100,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <TextBox HorizontalAlignment="Left" Margin="50,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="395" Height="80" VerticalScrollBarVisibility="Visible" x:Name="transfersTextBox"/>
+                        <TextBox HorizontalAlignment="Left" Margin="55,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="395" Height="80" VerticalScrollBarVisibility="Visible" x:Name="transfersTextBox"/>
 
                     </Grid>
                 </TabItem>
@@ -196,7 +210,7 @@
                     <Grid Background="AliceBlue">
                         <Label Content="ОТЧИСЛЕНИЯ" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
                         <Label Content="Год отчисления" HorizontalAlignment="Left" Margin="55,90,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="55,120,0,0" VerticalAlignment="Top" Width="40" x:Name="expulsionYearComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,120,0,0" VerticalAlignment="Top" Width="60" x:Name="expulsionYearComboBox"/>
                         <Label Content="Причина отчисления" HorizontalAlignment="Left" Margin="55,180,0,0" VerticalAlignment="Top" Padding="0"/>
                         <ComboBox HorizontalAlignment="Left" Margin="55,210,0,0" VerticalAlignment="Top" Width="400" x:Name="expulsionReasonComboBox">
                             <ComboBoxItem Content="Отчислен в связи с переводом в другое УВО"/>
@@ -209,7 +223,7 @@
                     <Grid Background="AliceBlue">
                         <Label Content="ПРЕРЫВАНИЕ СРОКА ОБУЧЕНИЯ" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
                         <Label Content="Год прерывания" HorizontalAlignment="Left" Margin="55,90,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="55,120,0,0" VerticalAlignment="Top" Width="40" x:Name="interruptionYearComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,120,0,0" VerticalAlignment="Top" Width="60" x:Name="interruptionYearComboBox"/>
                         <Label Content="Причина прерывания" HorizontalAlignment="Left" Margin="55,180,0,0" VerticalAlignment="Top" Padding="0"/>
                         <ComboBox HorizontalAlignment="Left" Margin="55,210,0,0" VerticalAlignment="Top" Width="400" x:Name="interruptionReasonComboBox">
                             <ComboBoxItem Content="Академический отпуск"/>
@@ -222,7 +236,7 @@
                     <Grid Background="AliceBlue">
                         <Label Content="ВОССТАНОВЛЕНИЕ" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
                         <Label Content="Год восстановления" HorizontalAlignment="Left" Margin="55,90,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="55,120,0,0" VerticalAlignment="Top" Width="40" x:Name="restorationYearComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,120,0,0" VerticalAlignment="Top" Width="60" x:Name="restorationYearComboBox"/>
 
                     </Grid>
                 </TabItem>
@@ -230,7 +244,7 @@
                     <Grid Background="AliceBlue">
                         <Label Content="ВЫПУСК" HorizontalAlignment="Left" Margin="35,15,0,0" VerticalAlignment="Top" FontSize="30"/>
                         <Label Content="Год окончания аспирантуры (соискательства)" HorizontalAlignment="Left" Margin="55,90,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="55,120,0,0" VerticalAlignment="Top" Width="40" x:Name="BIPGraduationYearComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,120,0,0" VerticalAlignment="Top" Width="60" x:Name="BIPGraduationYearComboBox"/>
                         <Label Content="В год окончания аспирантуры" HorizontalAlignment="Left" Margin="55,180,0,0" VerticalAlignment="Top" Padding="0"/>
                         <ComboBox HorizontalAlignment="Left" Margin="55,210,0,0" VerticalAlignment="Top" Width="400" x:Name="inCurrYearComboBox">
                             <ComboBoxItem Content="С выдачей диплома исследователя"/>
@@ -238,7 +252,7 @@
                             <ComboBoxItem Content="С защитой диссертации в срок обучения"/>
                         </ComboBox>
                         <Label Content="Год защиты диссертации после выпуска" HorizontalAlignment="Left" Margin="55,270,0,0" VerticalAlignment="Top" Padding="0"/>
-                        <ComboBox HorizontalAlignment="Left" Margin="55,300,0,0" VerticalAlignment="Top" Width="40" x:Name="BIPThesisDefYearComboBox"/>
+                        <ComboBox HorizontalAlignment="Left" Margin="55,300,0,0" VerticalAlignment="Top" Width="60" x:Name="BIPThesisDefYearComboBox"/>
 
                     </Grid>
                 </TabItem>
